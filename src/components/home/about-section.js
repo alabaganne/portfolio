@@ -1,22 +1,20 @@
 import { SectionHeader } from "@/components/section-header";
 import { Card, CardContent } from "@/components/ui/card";
 
+const paragraph =
+  "I specialise in building end-to-end applications with Vue, React, Next.js, Laravel, and Node.js, translating ideas into responsive interfaces and well-structured APIs. Within Agile teams I align closely with product, QA, and design, pairing rapid delivery with robust testing and documentation so launches stay calm and predictable.";
+
 export function AboutSection() {
   return (
     <section id="about" className="space-y-6">
       <SectionHeader
         eyebrow="ABOUT"
-        title="Product-focused engineer blending craft and impact"
-        description="I bridge engineering, design, and strategy to ship experiences that customers love and businesses can scale."
+        title="Full-stack developer focused on resilient web platforms"
+        description="I connect product thinking with engineering execution to deliver performant, maintainable experiences."
       />
       <Card className="border-white/10 bg-gradient-to-br from-white/[0.06] via-transparent to-transparent">
         <CardContent className="text-base leading-relaxed text-slate-200">
-          <p>
-            Over the past several years, I have shaped end-to-end product development for startups and scale-ups alike—from discovery and roadmap definition to architecture, delivery, and iteration. I obsess over clarity, accessibility, and measurable value.
-          </p>
-          <p>
-            Outside of shipping features, I invest in teams: facilitating rituals, documenting shared knowledge, and mentoring engineers to own outcomes. The result is calmer execution, faster learning loops, and products that earn trust.
-          </p>
+          <p>{paragraph}</p>
         </CardContent>
       </Card>
     </section>

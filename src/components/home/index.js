@@ -5,3 +5,4 @@ export { ExperienceSection } from "./experience-section";
 export { HeroSection } from "./hero-section";
 export { ProjectsSection } from "./projects-section";
 export { SkillsSection } from "./skills-section";
+export { LanguagesSection } from "./languages-section";

@@ -4,17 +4,10 @@ import {
   EducationSection,
   ExperienceSection,
   HeroSection,
+  LanguagesSection,
   ProjectsSection,
   SkillsSection,
 } from "@/components/home";
-import {
-  contactLinks,
-  education,
-  experiences,
-  projects,
-  skills,
-  stats,
-} from "@/data/home";
 
 export default function Home() {
   return (
@@ -24,13 +17,14 @@ export default function Home() {
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(600px_circle_at_20%_20%,rgba(37,99,235,0.18),transparent),radial-gradient(400px_circle_at_80%_10%,rgba(59,130,246,0.12),transparent)]"
       />
       <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-16 px-6 pt-16 md:px-10 md:pt-24 lg:gap-20">
-        <HeroSection stats={stats} />
+        <HeroSection />
         <AboutSection />
-        <ExperienceSection experiences={experiences} />
-        <ProjectsSection projects={projects} />
-        <SkillsSection skills={skills} />
-        <EducationSection education={education} />
-        <ContactSection contactLinks={contactLinks} />
+        <ExperienceSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <LanguagesSection />
+        <EducationSection />
+        <ContactSection />
         <footer className="border-t border-white/5 py-10 text-sm text-slate-500">
           <p>
             Crafted with curiosity and care · © {new Date().getFullYear()} Alaba Ganne

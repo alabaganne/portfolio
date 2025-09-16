@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 const buttonVariants = {
   default: "bg-sky-500 text-white hover:bg-sky-400/90",
   outline: "border border-white/15 bg-transparent text-slate-100 hover:bg-white/10",
-  ghost: "bg-transparent text-slate-300 hover:bg-white/10",
+  ghost: "bg-transparent border border-white/5 text-slate-300 hover:bg-white/10",
   subtle: "bg-white/10 text-white hover:bg-white/20",
 };
 

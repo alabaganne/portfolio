@@ -8,15 +8,56 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowUpRightIcon } from "@/components/icons";
+import { ArrowUpRight } from "lucide-react";
 
-export function ProjectsSection({ projects }) {
+const projects = [
+  {
+    name: "MenuMate",
+    tagline: "Digital menus for restaurants",
+    description:
+      "Platform for restaurants to create and manage QR-powered menus with live updates and Supabase auth.",
+    impact:
+      "Gives diners QR access to menus and lets restaurants capture online orders without extra hardware.",
+    tech: ["Next.js", "React", "Supabase", "Tailwind CSS", "React PDF"],
+    links: {
+      project: "https://github.com/alabaganne/MenuMate#readme",
+      source: "https://github.com/alabaganne/MenuMate",
+    },
+  },
+  {
+    name: "ATS Resume Builder",
+    tagline: "Automated resume generation",
+    description:
+      "ATS-friendly resume builder with live previews, PDF export, and reusable templates.",
+    impact: "Helps candidates create polished resumes in minutes.",
+    tech: ["Next.js", "React", "React PDF", "TypeScript"],
+    links: {
+      project: "https://github.com/alabaganne/ats-resume-builder#readme",
+      source: "https://github.com/alabaganne/ats-resume-builder",
+    },
+  },
+  {
+    name: "GoStage",
+    tagline: "Internship platform for students",
+    description:
+      "Matchmaking portal connecting students, university staff, and company recruiters with workflows and messaging.",
+    impact:
+      "Streamlined internship applications with tracking dashboards and document sharing.",
+    tech: ["Laravel", "Vue.js", "Tailwind CSS", "MySQL"],
+    links: {
+      project: "https://github.com/alabaganne/GoStage#readme",
+      source: "https://github.com/alabaganne/GoStage",
+    },
+  },
+];
+
+export function ProjectsSection() {
   return (
     <section id="projects" className="space-y-8">
       <SectionHeader
         eyebrow="PROJECTS"
         title="Selected work"
-        description="A sample of initiatives where I took ideas from concept to shipped experiences."
+        description="Platforms spanning restaurant tech, resume automation, and student internships."
       />
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
@@ -40,17 +81,31 @@ export function ProjectsSection({ projects }) {
                 </Badge>
               ))}
             </CardFooter>
-            <div className="mt-6 flex items-center justify-between">
-              <Button
-                href={project.href}
-                target="_blank"
-                rel="noreferrer"
-                variant="ghost"
-                className="px-0 text-sky-300 hover:text-white"
-              >
-                {project.linkLabel}
-                <ArrowUpRightIcon className="h-4 w-4" aria-hidden />
-              </Button>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {project.links?.project ? (
+                <Button
+                  href={project.links.project}
+                  target="_blank"
+                  rel="noreferrer"
+                  variant="ghost"
+                  className="px-0 text-sky-300 hover:text-white"
+                >
+                  View project
+                  <ArrowUpRight className="h-4 w-4" aria-hidden />
+                </Button>
+              ) : null}
+              {project.links?.source ? (
+                <Button
+                  href={project.links.source}
+                  target="_blank"
+                  rel="noreferrer"
+                  variant="ghost"
+                  className="px-0 text-sky-300 hover:text-white"
+                >
+                  View source code
+                  <ArrowUpRight className="h-4 w-4" aria-hidden />
+                </Button>
+              ) : null}
             </div>
           </Card>
         ))}

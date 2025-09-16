@@ -1,13 +1,40 @@
 import { SectionHeader } from "@/components/section-header";
 import { Card } from "@/components/ui/card";
 
-export function SkillsSection({ skills }) {
+const skills = [
+  "HTML5",
+  "CSS3",
+  "JavaScript (ES6+)",
+  "TypeScript",
+  "React.js",
+  "Next.js",
+  "Vue.js",
+  "AngularJS",
+  "Node.js",
+  "Express.js",
+  "NestJS",
+  "PHP",
+  "Laravel",
+  "WordPress",
+  "RESTful APIs",
+  "MySQL",
+  "MongoDB",
+  "Supabase",
+  "Tailwind CSS",
+  "Bootstrap",
+  "Git & GitHub",
+  "Linux",
+  "Unit & Integration Testing",
+  "Agile & Scrum",
+];
+
+export function SkillsSection() {
   return (
     <section id="skills" className="space-y-8">
       <SectionHeader
         eyebrow="SKILLS"
-        title="Tools & practices I rely on"
-        description="No buckets—each skill lives in its own card for quick scanning and editing."
+        title="Technical toolkit"
+        description="Frameworks, databases, and practices I reach for in full-stack delivery."
       />
       <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
         {skills.map((skill) => (

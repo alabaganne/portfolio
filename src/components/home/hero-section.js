@@ -7,45 +7,69 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  ArrowUpRightIcon,
-  DownloadIcon,
-  MailIcon,
-  MapPinIcon,
-} from "@/components/icons";
+import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 
-export function HeroSection({ stats }) {
+const profile = {
+  name: "Ala Baganne",
+  role: "Full-Stack Developer",
+  experience: "5+ Years Experience",
+  location: "Jemmel, Monastir, Tunisia",
+  headline: "Ala Baganne builds dependable full-stack web applications.",
+  summary:
+    "Hands-on with Vue, React, Laravel, and Node.js to ship responsive interfaces and reliable backends for healthcare, real estate, and education teams.",
+  email: "alabaganne9@gmail.com",
+  phone: "+21650101959",
+  phoneDisplay: "+216 50 101 959",
+};
+
+const stats = [
+  {
+    value: "5+",
+    label: "Years building full-stack apps",
+    detail: "End-to-end ownership from architecture to rollout.",
+  },
+  {
+    value: "10+",
+    label: "Production launches",
+    detail: "Healthcare, real estate, and internship platforms shipped.",
+  },
+  {
+    value: "E2E",
+    label: "Testing & performance",
+    detail: "From automated coverage to database optimisation.",
+  },
+];
+
+export function HeroSection() {
   return (
     <section className="space-y-10">
       <div className="flex flex-wrap items-center gap-4">
         <Badge className="rounded-full bg-white/10 text-xs uppercase tracking-[0.35em] text-slate-200">
-          Software Engineer
+          {profile.role} · {profile.experience}
         </Badge>
         <p className="flex items-center gap-2 text-sm text-slate-400">
-          <MapPinIcon className="h-4 w-4" aria-hidden />
-          Based in Remote · Working with global teams
+          <MapPin className="h-4 w-4" aria-hidden />
+          Based in {profile.location}
         </p>
       </div>
       <div className="space-y-6">
         <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-          Alaba Ganne builds calm, resilient product experiences for teams shipping at scale.
+          {profile.headline}
         </h1>
-        <p className="max-w-3xl text-lg leading-relaxed text-slate-300">
-          Product-minded engineer with a love for design systems, impactful experimentation, and mentoring multi-disciplinary teams. I turn complex workflows into focused customer journeys and partner closely with product, design, and data to deliver measurable outcomes.
-        </p>
+        <p className="max-w-3xl text-lg leading-relaxed text-slate-300">{profile.summary}</p>
       </div>
       <div className="flex flex-wrap gap-3">
-        <Button href="mailto:hello@alabaganne.com" className="shadow-[0_15px_30px_-20px_rgba(56,189,248,0.8)]">
-          <MailIcon className="h-4 w-4" aria-hidden />
-          Start a conversation
+        <Button href={`mailto:${profile.email}`} className="shadow-[0_15px_30px_-20px_rgba(56,189,248,0.8)]">
+          <Mail className="h-4 w-4" aria-hidden />
+          Email Ala
         </Button>
-        <Button href="#experience" variant="outline" className="backdrop-blur">
-          <DownloadIcon className="h-4 w-4" aria-hidden />
-          View résumé
+        <Button href={`tel:${profile.phone}`} variant="outline" className="backdrop-blur">
+          <Phone className="h-4 w-4" aria-hidden />
+          Call {profile.phoneDisplay}
         </Button>
         <Button href="#projects" variant="ghost" className="text-slate-300 hover:text-white">
-          View selected work
-          <ArrowUpRightIcon className="h-4 w-4" aria-hidden />
+          See recent projects
+          <ArrowUpRight className="h-4 w-4" aria-hidden />
         </Button>
       </div>
       <div className="grid gap-4 md:grid-cols-3">
