@@ -20,8 +20,8 @@ const projects = [
       "Gives diners QR access to menus and lets restaurants capture online orders without extra hardware.",
     tech: ["Next.js", "React", "Supabase", "Tailwind CSS", "React PDF"],
     links: {
-      project: "https://github.com/alabaganne/MenuMate#readme",
-      source: "https://github.com/alabaganne/MenuMate",
+      project: "https://www.menumate.net",
+      // source: "https://github.com/alabaganne/MenuMate",
     },
   },
   {
@@ -32,8 +32,8 @@ const projects = [
     impact: "Helps candidates create polished resumes in minutes.",
     tech: ["Next.js", "React", "React PDF", "TypeScript"],
     links: {
-      project: "https://github.com/alabaganne/ats-resume-builder#readme",
-      source: "https://github.com/alabaganne/ats-resume-builder",
+      project: "https://ats-react-resume-builder.vercel.app/",
+      source: "https://github.com/alabaganne/react-resume-builder",
     },
   },
   {
@@ -45,8 +45,8 @@ const projects = [
       "Streamlined internship applications with tracking dashboards and document sharing.",
     tech: ["Laravel", "Vue.js", "Tailwind CSS", "MySQL"],
     links: {
-      project: "https://github.com/alabaganne/GoStage#readme",
-      source: "https://github.com/alabaganne/GoStage",
+      project: null,
+      source: "https://github.com/alabaganne/GoStage.tn",
     },
   },
 ];
