@@ -1,31 +1,57 @@
 import { SectionHeader } from "@/components/section-header";
 import { Card } from "@/components/ui/card";
+import {
+  Atom,
+  Blocks,
+  Braces,
+  CircleDot,
+  Cloud,
+  Code,
+  Database,
+  FileCode2,
+  FileType2,
+  GitBranch,
+  Kanban,
+  Layers,
+  Leaf,
+  Network,
+  Octagon,
+  Palette,
+  PenTool,
+  Route,
+  Server,
+  ShieldCheck,
+  Terminal,
+  TestTube,
+  Triangle,
+  Wind,
+} from "lucide-react";
 
 const skills = [
-  "HTML5",
-  "CSS3",
-  "JavaScript (ES6+)",
-  "TypeScript",
-  "React.js",
-  "Next.js",
-  "Vue.js",
-  "AngularJS",
-  "Node.js",
-  "Express.js",
-  "PHP",
-  "Laravel",
-  "WordPress",
-  "AWS",
-  "RESTful APIs",
-  "MySQL",
-  "MongoDB",
-  "Supabase",
-  "Tailwind CSS",
-  "Bootstrap",
-  "Git & GitHub",
-  "Linux",
-  "Unit & Integration Testing",
-  "Agile & Scrum",
+  { name: "HTML5", icon: Code },
+  { name: "CSS3", icon: Palette },
+  { name: "JavaScript (ES6+)", icon: Braces },
+  { name: "TypeScript", icon: FileType2 },
+  { name: "React.js", icon: Atom },
+  { name: "Next.js", icon: CircleDot },
+  { name: "Vue.js", icon: Triangle },
+  { name: "AngularJS", icon: Octagon },
+  { name: "Node.js", icon: Server },
+  { name: "Express.js", icon: Route },
+  { name: "PHP", icon: FileCode2 },
+  { name: "Laravel", icon: Layers },
+  { name: "WordPress", icon: PenTool },
+  { name: "AWS", icon: Cloud },
+  { name: "RESTful APIs", icon: Network },
+  { name: "MySQL", icon: Database },
+  { name: "MongoDB", icon: Leaf },
+  { name: "Supabase", icon: ShieldCheck },
+  { name: "Tailwind CSS", icon: Wind },
+  { name: "Bootstrap", icon: Blocks },
+  { name: "Git & GitHub", icon: GitBranch },
+  { name: "Linux", icon: Terminal },
+  { name: "Unit & Integration Testing", icon: TestTube },
+  { name: "Agile & Scrum", icon: Kanban },
 ];
 
 export function SkillsSection() {
@@ -37,12 +63,15 @@ export function SkillsSection() {
         description="Frameworks, databases, and practices I reach for in full-stack delivery."
       />
       <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
-        {skills.map((skill) => (
+        {skills.map(({ name, icon: Icon }) => (
           <Card
-            key={skill}
-            className="border-white/10 bg-white/[0.04] p-4 text-center text-sm font-medium text-slate-200"
+            key={name}
+            className="flex items-center gap-3 border-white/10 bg-white/[0.04] p-4 text-left text-sm font-medium text-slate-200"
           >
-            {skill}
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-sky-400/10 text-sky-400">
+              <Icon className="h-5 w-5" aria-hidden />
+            </span>
+            <span>{name}</span>
           </Card>
         ))}
       </div>
