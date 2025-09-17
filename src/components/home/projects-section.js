@@ -61,7 +61,7 @@ export function ProjectsSection() {
       />
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
-          <Card key={project.name} className="border-white/10 bg-white/[0.04]">
+          <Card key={project.name} className="border-white/10 bg-white/[0.04] flex flex-col">
             <CardHeader className="mb-4 gap-2">
               <Badge className="w-fit bg-white/10 text-[0.65rem] tracking-[0.3em]">
                 {project.tagline}
@@ -74,20 +74,20 @@ export function ProjectsSection() {
               </p>
               <p className="text-sm text-slate-400">{project.impact}</p>
             </CardContent>
-            <CardFooter className="mt-6 flex flex-wrap gap-3">
+            <CardFooter className="mt-6 mb-4 flex flex-wrap gap-3">
               {project.tech.map((tech) => (
                 <Badge key={tech} variant="subtle">
                   {tech}
                 </Badge>
               ))}
             </CardFooter>
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-auto flex flex-wrap gap-3">
               {project.links?.project ? (
                 <Button
                   href={project.links.project}
                   target="_blank"
                   rel="noreferrer"
-                  variant="ghost"
+                  variant="outline"
                   className="px-0 text-sky-300 hover:text-white"
                 >
                   View project
@@ -99,7 +99,7 @@ export function ProjectsSection() {
                   href={project.links.source}
                   target="_blank"
                   rel="noreferrer"
-                  variant="ghost"
+                  variant="outline"
                   className="px-0 text-sky-300 hover:text-white"
                 >
                   View source code
