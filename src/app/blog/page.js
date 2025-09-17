@@ -49,56 +49,58 @@ export default async function BlogPage() {
             </p>
           ) : (
             posts.map((post) => (
-              <article
-                key={post.slug}
-                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-lg shadow-slate-950/40 transition hover:border-sky-400/60 hover:bg-white/10"
-              >
-                {post.coverImage ? (
-                  <div className="relative h-48 w-full overflow-hidden bg-slate-900">
-                    <Image
-                      src={post.coverImage}
-                      alt={post.title}
-                      fill
-                      sizes="(min-width: 768px) 50vw, 100vw"
-                      className="object-cover object-center transition duration-500 group-hover:scale-105"
-                      priority={post.slug === posts[0]?.slug}
-                    />
-                  </div>
-                ) : null}
-                <div className="flex flex-1 flex-col gap-4 p-6">
-                  <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.3em] text-sky-200/80">
-                    {post.category && <span>{post.category}</span>}
-                    {post.date && (
-                      <span className="text-slate-400">
-                        {new Date(post.date).toLocaleDateString("en-US", {
-                          month: "short",
-                          day: "numeric",
-                          year: "numeric",
-                        })}
-                      </span>
-                    )}
-                  </div>
-                  <h2 className="text-xl font-semibold text-white transition group-hover:text-sky-200">
-                    <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                  </h2>
-                  <p className="text-sm leading-relaxed text-slate-300/90">{post.description}</p>
-                  {post.tags.length > 0 ? (
-                    <ul className="mt-auto flex flex-wrap gap-2 text-xs text-slate-400">
-                      {post.tags.map((tag) => (
-                        <li
-                          key={tag}
-                          className="rounded-full border border-white/10 bg-white/5 px-3 py-1 transition group-hover:border-sky-400/40 group-hover:text-sky-200"
-                        >
-                          #{tag}
-                        </li>
-                      ))}
-                    </ul>
+              <article key={post.slug} className="h-full">
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-lg shadow-slate-950/40 transition hover:border-sky-400/60 hover:bg-white/10"
+                >
+                  {post.coverImage ? (
+                    <div className="relative h-48 w-full overflow-hidden bg-slate-900">
+                      <Image
+                        src={post.coverImage}
+                        alt={post.title}
+                        fill
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        className="object-cover object-center transition duration-500 group-hover:scale-105"
+                        priority={post.slug === posts[0]?.slug}
+                      />
+                    </div>
                   ) : null}
-                  <div className="mt-4 flex items-center justify-between text-sm text-sky-200/90">
-                    <span>Read the story</span>
-                    <span aria-hidden className="transition group-hover:translate-x-1">→</span>
+                  <div className="flex flex-1 flex-col gap-4 p-6">
+                    <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.3em] text-sky-200/80">
+                      {post.category && <span>{post.category}</span>}
+                      {post.date && (
+                        <span className="text-slate-400">
+                          {new Date(post.date).toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric",
+                          })}
+                        </span>
+                      )}
+                    </div>
+                    <h2 className="text-xl font-semibold text-white transition group-hover:text-sky-200">
+                      {post.title}
+                    </h2>
+                    <p className="text-sm leading-relaxed text-slate-300/90">{post.description}</p>
+                    {post.tags.length > 0 ? (
+                      <ul className="mt-auto flex flex-wrap gap-2 text-xs text-slate-400">
+                        {post.tags.map((tag) => (
+                          <li
+                            key={tag}
+                            className="rounded-full border border-white/10 bg-white/5 px-3 py-1 transition group-hover:border-sky-400/40 group-hover:text-sky-200"
+                          >
+                            #{tag}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                    <div className="mt-4 flex items-center justify-between text-sm text-sky-200/90">
+                      <span>Read the story</span>
+                      <span aria-hidden className="transition group-hover:translate-x-1">→</span>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </article>
             ))
           )}
