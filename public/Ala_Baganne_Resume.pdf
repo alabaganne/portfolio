@@ -1,0 +1,671 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Annots [
+<</Type /Annot /Subtype /Link /Rect [70.8661417322834666 725.6695275590550409 291.3661417322836087 702.9923622047243725] /Border [0 0 0] /A <</S /URI /URI (https://www.linkedin.com/in/alabaganne/) >> >>
+<</Type /Annot /Subtype /Link /Rect [70.8661417322834666 711.4962992125983874 240.5661417322835689 688.819133858267719] /Border [0 0 0] /A <</S /URI /URI (https://github.com/alabaganne) >> >>
+]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 4685
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F2 16 Tf
+18.3999999999999986 TL
+0 g
+70.8661417322834666 771.0238582677164914 Td
+(Ala Baganne) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+70.8661417322834666 748.346692913385823 Td
+(Full-Stack Developer | Next.js, Laravel, Vue.js | 5+ Years Experience) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+70.8661417322834666 725.6695275590550409 Td
+(Email: alabaganne9@gmail.com | Phone: +216 50101959 | Location: Jemmel, Monastir, Tunisia) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. 0. 1. rg
+70.8661417322834666 711.4962992125983874 Td
+(LinkedIn: https://www.linkedin.com/in/alabaganne/) Tj
+ET
+0.2834645669291339 w
+70.8661417322834666 708.6616535433070112 m
+291.3661417322836087 708.6616535433070112 l
+S
+BT
+/F1 10 Tf
+11.5 TL
+0. 0. 1. rg
+70.8661417322834666 697.3230708661417339 Td
+(GitHub: https://github.com/alabaganne) Tj
+ET
+0.2834645669291339 w
+70.8661417322834666 694.4884251968503577 m
+240.5661417322835689 694.4884251968503577 l
+S
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0. g
+70.8661417322834666 668.9766141732283131 Td
+(SUMMARY) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 651.9687401574802834 Td
+(Full Stack Web Developer with 5+ years of hands-on experience in JavaScript, Vue.js, React.js,) Tj
+T* (Laravel, Node.js, and PHP. Proven track record of designing and building scalable web applications,) Tj
+T* (implementing responsive user interfaces, and optimizing database performance. Experienced in Agile) Tj
+T* (development, automated testing, and cross-functional team collaboration. Strong background in both) Tj
+T* (frontend and backend technologies with expertise in modern development frameworks.) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0. g
+70.8661417322834666 569.7640157480313974 Td
+(TECHNICAL SKILLS) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 552.7561417322833677 Td
+(Frontend Technologies: HTML5, CSS3, JavaScript \(ES6+\), TypeScript, Vue.js, React.js, Next.js,) Tj
+T* (AngularJS, Angular) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 521.5750393700786844 Td
+(Backend Technologies: Node.js, Express.js, NestJS, Laravel, PHP, RESTful APIs) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 504.5671653543306547 Td
+(Databases: MySQL, MongoDB, NoSQL, SQL Server, Firebase, Supabase, Database Design, Query) Tj
+T* (Optimization) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 473.3860629921259147 Td
+(Styling Frameworks: Tailwind CSS, Bootstrap, Shadcn UI, Responsive Web Design, Mobile-First) Tj
+T* (Design) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 442.2049606299212314 Td
+(Development Tools: Git, GitHub, Version Control, Linux, Unit Testing, Integration Testing) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 425.1970866141731449 Td
+(Additional Skills: Python, C++, Figma, Adobe Photoshop, Adobe XD, Agile Methodology, Scrum, API) Tj
+T* (Development) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0. g
+70.8661417322834666 377.0081102362204319 Td
+(EXPERIENCE) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 360.0002362204724022 Td
+(Software Engineer) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 345.8270078740156919 Td
+(Retain Health | Boston, MA | July 2021 – Present) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 328.8191338582676053 Td
+(• Developed and maintained core application features using AngularJS, Express.js, Bootstrap,) Tj
+T* (and MySQL for healthcare software platform) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 300.4726771653542983 Td
+(• Implemented comprehensive test suite with Karma and Protractor, preventing potential bugs) Tj
+T* (through unit, integration, and end-to-end testing coverage) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 272.1262204724408775 Td
+(• Collaborated with Quality Assurance \(QA\) teams and UX/UI designers to deliver user-centric) Tj
+T* (features within Agile development cycles) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 232.4411811023621794 Td
+(Full Stack Web Developer Intern) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 218.2679527559054122 Td
+(Realinflo | Hong Kong | February 2021 – May 2021) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 201.2600787401573825 Td
+(• Built responsive admin dashboard using Vue.js \(Quasar Framework\) and Feathers.js \(Node.js\)) Tj
+T* (for real estate data management) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 172.9136220472439618 Td
+(• Delivered regular project updates to Chief Technology Officer \(CTO\) and participated in product) Tj
+T* (roadmap planning sessions) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 144.5671653543306547 Td
+(• Implemented RESTful API integrations and database optimization for property listing) Tj
+T* (management system) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 4410
+>>
+stream
+0.2834645669291339 w
+0 G
+BT
+/F2 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 771.0238582677164914 Td
+(Full Stack Web Developer Intern) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 756.8506299212598378 Td
+(Satoripop | Sousse, Tunisia | July 2020 – September 2020) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 739.8427559055118081 Td
+(• Developed employee management web application using Vue.js frontend and Laravel backend) Tj
+T* (framework) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 711.4962992125983874 Td
+(• Converted Photoshop Design \(PSD\) files into responsive HTML/CSS layouts using Bootstrap) Tj
+T* (framework) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 683.1498425196850803 Td
+(• Created comprehensive API documentation using PHP Swagger for backend services and) Tj
+T* (endpoints) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 654.8033858267716596 Td
+(• Implemented user authentication, role-based access control, and employee data management) Tj
+T* (features) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0. g
+70.8661417322834666 615.1183464566928478 Td
+(KEY PROJECTS) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 598.1104724409448181 Td
+(Internship Application Platform | End of Studies Project) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 583.9372440944881646 Td
+(Higher Institute of Applied Science and Technology of Sousse | 2021) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 566.9293700787401349 Td
+(• Designed and developed full-stack web application connecting students, university staff, and) Tj
+T* (company HR departments) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 538.5829133858267141 Td
+(• Implemented real-time chat functionality using WebSocket technology for seamless) Tj
+T* (communication between users) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 510.2364566929133503 Td
+(• Built using Laravel backend framework with Eloquent ORM, MySQL database, Inertia.js for) Tj
+T* (SPA functionality, Vue.js frontend, and Tailwind CSS for styling) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 481.8899999999999295 Td
+(• Integrated user authentication, role-based permissions, application tracking, and document) Tj
+T* (management system) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0. g
+70.8661417322834666 442.2049606299212314 Td
+(EDUCATION) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 425.1970866141731449 Td
+(Engineering Degree in Software Engineering) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 411.0238582677164914 Td
+(Higher Institute of Applied Science and Technology of Sousse | June 2024) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 388.3466929133857661 Td
+(Bachelor of Science in Computer Science) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 374.1734645669290558 Td
+(Higher Institute of Applied Science and Technology of Sousse | June 2021) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 351.4962992125983874 Td
+(High School Diploma – Experimental Science) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+70.8661417322834666 337.323070866141677 Td
+(High School of Jemmal | June 2018) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0. g
+70.8661417322834666 314.6459055118109518 Td
+(CERTIFICATIONS) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 297.6380314960629221 Td
+(• Microsoft Technology Associate: Introduction to Programming Using HTML and CSS | 2019) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 283.4648031496062686 Td
+(• Microsoft Technology Associate: Introduction to Programming Using JavaScript | 2019) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 269.2915748031495013 Td
+(• Microsoft Technology Associate: Introduction to Programming Using Python | 2021) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 255.1183464566928478 Td
+(• Microsoft Technology Associate: Database Fundamentals | 2021) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 240.9451181102361943 Td
+(• Cisco Certified Network Associate \(CCNA\): Introduction to Networks | 2022) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0. g
+70.8661417322834666 204.0947244094487587 Td
+(LANGUAGES) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 187.086850393700729 Td
+(• English \(Fluent\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 172.9136220472439618 Td
+(• Arabic \(Native\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0. g
+85.0393700787401627 158.7403937007873083 Td
+(• French \(Intermediate\)) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R ]
+/Count 2
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 7 0 R
+/F2 8 0 R
+/F3 9 0 R
+/F4 10 0 R
+/F5 11 0 R
+/F6 12 0 R
+/F7 13 0 R
+/F8 14 0 R
+/F9 15 0 R
+/F10 16 0 R
+/F11 17 0 R
+/F12 18 0 R
+/F13 19 0 R
+/F14 20 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+21 0 obj
+<<
+/Producer (jsPDF 2.5.1)
+/CreationDate (D:20250614231611+01'00')
+>>
+endobj
+22 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 23
+0000000000 65535 f 
+0000009895 00000 n 
+0000011720 00000 n 
+0000000015 00000 n 
+0000000559 00000 n 
+0000005296 00000 n 
+0000005433 00000 n 
+0000009958 00000 n 
+0000010083 00000 n 
+0000010213 00000 n 
+0000010346 00000 n 
+0000010484 00000 n 
+0000010608 00000 n 
+0000010737 00000 n 
+0000010869 00000 n 
+0000011005 00000 n 
+0000011133 00000 n 
+0000011260 00000 n 
+0000011389 00000 n 
+0000011522 00000 n 
+0000011624 00000 n 
+0000011970 00000 n 
+0000012056 00000 n 
+trailer
+<<
+/Size 23
+/Root 22 0 R
+/Info 21 0 R
+/ID [ <43713A92485AFE4BAB0F56B8AB256E26> <43713A92485AFE4BAB0F56B8AB256E26> ]
+>>
+startxref
+12160
+%%EOF

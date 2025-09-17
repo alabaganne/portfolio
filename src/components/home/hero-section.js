@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, Download, Mail, MapPin, Phone } from "lucide-react";
 
 const profile = {
   name: "Ala Baganne",
@@ -67,7 +67,16 @@ export function HeroSection() {
           <Phone className="h-4 w-4" aria-hidden />
           Call {profile.phoneDisplay}
         </Button>
-        <Button href="#projects" variant="ghost" className="text-slate-300 hover:text-white">
+        <Button
+          href="/Ala_Baganne_Resume.pdf"
+          variant="outline"
+          download
+          className="backdrop-blur"
+        >
+          <Download className="h-4 w-4" aria-hidden />
+          Download Resume
+        </Button>
+        <Button href="#projects" variant="outline" className="text-slate-300 hover:text-white">
           See recent projects
           <ArrowUpRight className="h-4 w-4" aria-hidden />
         </Button>
