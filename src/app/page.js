@@ -54,7 +54,7 @@ export default function Home() {
         <ContactSection />
         <footer className="border-t border-white/5 py-10 text-sm text-slate-500">
           <p>
-            Crafted with curiosity and care · © {new Date().getFullYear()} Alaba Ganne
+            Crafted with curiosity and care · © {new Date().getFullYear()} Ala Baganne
           </p>
         </footer>
       </div>
