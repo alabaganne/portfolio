@@ -6,12 +6,14 @@ import {
   HeroSection,
   LanguagesSection,
   ProjectsSection,
+  ServicesSection,
   SkillsSection,
 } from "@/components/home";
 
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
+  { href: "#services", label: "Services" },
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },
   { href: "#languages", label: "Languages" },
@@ -48,6 +50,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
+        <ServicesSection />
         <ProjectsSection />
         <SkillsSection />
         <LanguagesSection />
