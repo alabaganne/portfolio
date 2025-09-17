@@ -17,6 +17,7 @@ const navLinks = [
   { href: "#languages", label: "Languages" },
   { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export default function Home() {
