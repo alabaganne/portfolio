@@ -80,6 +80,10 @@ export function HeroSection() {
           See recent projects
           <ArrowUpRight className="h-4 w-4" aria-hidden />
         </Button>
+        <Button href="/blog" variant="subtle" className="backdrop-blur text-slate-100">
+          Read the blog
+          <ArrowUpRight className="h-4 w-4" aria-hidden />
+        </Button>
       </div>
       <div className="grid gap-4 md:grid-cols-3">
         {stats.map((stat) => (
