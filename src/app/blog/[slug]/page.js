@@ -92,15 +92,15 @@ export default async function BlogPostPage({ params }) {
     <main className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.06),_rgba(3,7,18,0.96))] pb-20 text-slate-100">
       <div className="absolute inset-x-0 top-0 -z-10 h-64 bg-[radial-gradient(600px_circle_at_10%_20%,rgba(56,189,248,0.18),transparent)]" aria-hidden />
       <div className="relative mx-auto flex w-full max-w-3xl flex-col gap-10 px-6 pt-20 md:px-8">
-        <div className="flex items-center justify-between text-sm text-slate-400">
+        <div className="flex flex-col gap-4 text-sm text-slate-400">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-sky-200/90 transition hover:border-sky-400/40 hover:text-sky-100"
+            className="inline-flex max-w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-sky-200/90 transition hover:border-sky-400/40 hover:text-sky-100"
           >
             <span aria-hidden>←</span> Back to blog
           </Link>
           {metadata.tags.length > 0 && (
-            <div className="hidden flex-wrap gap-2 text-xs uppercase tracking-[0.3em] text-sky-200/70 sm:flex">
+            <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.3em] text-sky-200/70">
               {metadata.tags.map((tag) => (
                 <span key={tag} className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
                   #{tag}
