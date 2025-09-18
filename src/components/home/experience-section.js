@@ -65,17 +65,17 @@ export function ExperienceSection() {
       />
       <div className="relative">
         <div
-          className="absolute left-3 top-1 hidden h-full w-px bg-gradient-to-b from-purple-500/60 via-white/10 to-transparent md:block"
+          className="absolute left-3 top-1 hidden h-full w-px bg-gradient-to-b from-sky-500/60 via-white/10 to-transparent md:block"
           aria-hidden
         />
         <ol className="space-y-8">
           {experiences.map((role) => (
             <li key={`${role.company}-${role.period}`} className="group relative md:pl-12">
               <span
-                className="absolute left-2 top-12 hidden h-3 w-3 rounded-full border-2 border-purple-400 bg-slate-950 transition group-hover:border-purple-300 group-hover:bg-purple-400/30 md:block"
+                className="absolute left-2 top-12 hidden h-3 w-3 rounded-full border-2 border-sky-400 bg-slate-950 transition group-hover:border-sky-300 group-hover:bg-sky-400/30 md:block"
                 aria-hidden
               />
-              <Card className="border-white/10 bg-white/[0.035] p-0 shadow-[0_0_0_1px_rgba(148,163,184,0.12)] transition hover:border-purple-400/40 hover:bg-white/[0.05]">
+              <Card className="border-white/10 bg-white/[0.035] p-0 shadow-[0_0_0_1px_rgba(148,163,184,0.12)] transition hover:border-sky-400/40 hover:bg-white/[0.05]">
                 <CardHeader className="mb-0 gap-4 border-b border-white/5 p-6">
                   <div className="flex flex-wrap items-start justify-between gap-4">
                     <div className="space-y-2">
@@ -87,7 +87,7 @@ export function ExperienceSection() {
                       </CardDescription>
                     </div>
                     <div className="flex flex-col items-end gap-2 text-right">
-                      <span className="rounded-full border border-purple-400/40 bg-purple-400/10 px-4 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-purple-100">
+                      <span className="rounded-full border border-sky-400/40 bg-sky-400/10 px-4 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-sky-100">
                         {role.period}
                       </span>
                       <span className="flex items-center gap-2 text-xs font-medium text-slate-400">
@@ -102,7 +102,7 @@ export function ExperienceSection() {
                   <ul className="space-y-3">
                     {role.achievements.map((item) => (
                       <li key={item} className="flex gap-3">
-                        <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-purple-400/80" />
+                        <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-sky-400/80" />
                         <span className="leading-relaxed">{item}</span>
                       </li>
                     ))}
