@@ -66,10 +66,10 @@ export function SkillsSection() {
         {skills.map(({ name, icon: Icon }) => (
           <Card
             key={name}
-            className="flex items-center gap-3 border-white/10 bg-white/[0.04] p-4 text-left text-sm font-medium text-slate-200"
+            className="flex flex-col items-center gap-3 border-white/10 bg-white/[0.04] p-4 text-center text-sm font-medium text-slate-200"
           >
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-sky-400/10 text-sky-400">
-              <Icon className="h-5 w-5" aria-hidden />
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-400/10 text-sky-400">
+              <Icon className="h-6 w-6" aria-hidden />
             </span>
             <span>{name}</span>
           </Card>
