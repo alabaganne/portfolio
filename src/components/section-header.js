@@ -7,7 +7,6 @@ export function SectionHeader({ eyebrow, title, description, className }) {
       {eyebrow ? (
         <Badge
           variant="outline"
-          className="w-fit rounded-full border-white/10 bg-white/5 px-4 py-1 text-xs font-medium tracking-[0.3em] text-slate-300"
         >
           {eyebrow}
         </Badge>
