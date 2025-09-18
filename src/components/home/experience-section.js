@@ -63,45 +63,66 @@ export function ExperienceSection() {
         title="Professional experience"
         description="Shaping healthcare, real estate, and HR platforms with reliable frontend and backend delivery."
       />
-      <div className="space-y-6">
-        {experiences.map((role) => (
-          <Card key={`${role.company}-${role.period}`} className="border-white/10 bg-white/[0.035]">
-            <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-              <div className="md:w-64">
-                <CardHeader className="mb-0 gap-3 p-0">
-                  <CardTitle className="text-xl text-white">{role.role}</CardTitle>
-                  <CardDescription className="text-sm text-slate-400">
-                    {role.company} · {role.period}
-                  </CardDescription>
-                  <p className="flex items-center gap-2 text-sm text-slate-400">
-                    <MapPin className="h-4 w-4" aria-hidden />
-                    {role.location}
-                  </p>
+      <div className="relative">
+        <div
+          className="absolute left-3 top-1 hidden h-full w-px bg-gradient-to-b from-purple-500/60 via-white/10 to-transparent md:block"
+          aria-hidden
+        />
+        <ol className="space-y-8">
+          {experiences.map((role) => (
+            <li key={`${role.company}-${role.period}`} className="group relative md:pl-12">
+              <span
+                className="absolute left-2 top-12 hidden h-3 w-3 rounded-full border-2 border-purple-400 bg-slate-950 transition group-hover:border-purple-300 group-hover:bg-purple-400/30 md:block"
+                aria-hidden
+              />
+              <Card className="border-white/10 bg-white/[0.035] p-0 shadow-[0_0_0_1px_rgba(148,163,184,0.12)] transition hover:border-purple-400/40 hover:bg-white/[0.05]">
+                <CardHeader className="mb-0 gap-4 border-b border-white/5 p-6">
+                  <div className="flex flex-wrap items-start justify-between gap-4">
+                    <div className="space-y-2">
+                      <CardTitle className="text-2xl font-semibold text-white">
+                        {role.role}
+                      </CardTitle>
+                      <CardDescription className="text-sm text-slate-300">
+                        {role.company}
+                      </CardDescription>
+                    </div>
+                    <div className="flex flex-col items-end gap-2 text-right">
+                      <span className="rounded-full border border-purple-400/40 bg-purple-400/10 px-4 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-purple-100">
+                        {role.period}
+                      </span>
+                      <span className="flex items-center gap-2 text-xs font-medium text-slate-400">
+                        <MapPin className="h-4 w-4" aria-hidden />
+                        {role.location}
+                      </span>
+                    </div>
+                  </div>
                 </CardHeader>
-              </div>
-              <div className="flex-1">
-                <CardContent className="gap-4 p-0 text-sm text-slate-200">
-                  <p className="text-slate-300">{role.summary}</p>
+                <CardContent className="gap-5 p-6 text-sm text-slate-200">
+                  <p className="text-base leading-relaxed text-slate-300">{role.summary}</p>
                   <ul className="space-y-3">
                     {role.achievements.map((item) => (
                       <li key={item} className="flex gap-3">
-                        <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-sky-400" />
+                        <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-purple-400/80" />
                         <span className="leading-relaxed">{item}</span>
                       </li>
                     ))}
                   </ul>
                 </CardContent>
-              </div>
-            </div>
-            <CardFooter className="mt-8 border-t border-white/5 pt-4">
-              {role.tech.map((tech) => (
-                <Badge key={tech} variant="subtle" className="text-xs">
-                  {tech}
-                </Badge>
-              ))}
-            </CardFooter>
-          </Card>
-        ))}
+                <CardFooter className="mt-0 border-t border-white/5 bg-white/[0.02] p-6 pt-4">
+                  {role.tech.map((tech) => (
+                    <Badge
+                      key={tech}
+                      variant="subtle"
+                      className="border-white/10 bg-white/10 text-[0.7rem] text-slate-100"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </CardFooter>
+              </Card>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

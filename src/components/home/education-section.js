@@ -67,30 +67,49 @@ export function EducationSection() {
         title="Education & certifications"
         description="Academic foundations and professional credentials that inform my engineering approach."
       />
-      <div className="grid gap-6 md:grid-cols-2">
-        {education.map((item) => (
-          <Card key={`${item.school}-${item.degree}-${item.period}`} className="border-white/10 bg-white/[0.035]">
-            <CardHeader className="mb-3 gap-2">
-              <CardTitle className="text-lg text-white">{item.school}</CardTitle>
-              <CardDescription className="text-sm text-slate-400">{item.degree}</CardDescription>
-              <p className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-slate-500">
-                <Calendar className="h-4 w-4" aria-hidden />
-                {item.period}
-              </p>
-            </CardHeader>
-            {item.notes && item.notes.length > 0 ? (
-              <CardContent className="gap-3 text-sm text-slate-300">
-                <ul className="space-y-2">
-                  {item.notes.map((note) => (
-                    <li key={note} className="leading-relaxed">
-                      {note}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            ) : null}
-          </Card>
-        ))}
+      <div className="relative">
+        <div
+          className="absolute left-3 top-1 hidden h-full w-px bg-gradient-to-b from-sky-500/50 via-white/10 to-transparent md:block"
+          aria-hidden
+        />
+        <ol className="space-y-6">
+          {education.map((item) => (
+            <li key={`${item.school}-${item.degree}-${item.period}`} className="group relative md:pl-12">
+              <span
+                className="absolute left-2 top-9 hidden h-3 w-3 rounded-full border-2 border-sky-400 bg-slate-950 transition group-hover:border-sky-300 group-hover:bg-sky-400/30 md:block"
+                aria-hidden
+              />
+              <Card className="border-white/10 bg-white/[0.035] p-0 shadow-[0_0_0_1px_rgba(148,163,184,0.12)] transition hover:border-sky-400/40 hover:bg-white/[0.05]">
+                <CardHeader className="mb-0 gap-3 p-6 pb-4">
+                  <div className="flex flex-wrap items-start justify-between gap-4">
+                    <CardTitle className="text-lg font-semibold text-white">
+                      {item.school}
+                    </CardTitle>
+                    <span className="flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-sky-100">
+                      <Calendar className="h-3.5 w-3.5" aria-hidden />
+                      {item.period}
+                    </span>
+                  </div>
+                  <CardDescription className="text-sm text-slate-300">
+                    {item.degree}
+                  </CardDescription>
+                </CardHeader>
+                {item.notes && item.notes.length > 0 ? (
+                  <CardContent className="gap-3 p-6 pt-0 text-sm text-slate-200">
+                    <ul className="space-y-2">
+                      {item.notes.map((note) => (
+                        <li key={note} className="flex gap-3 leading-relaxed">
+                          <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-sky-400/80" />
+                          <span>{note}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                ) : null}
+              </Card>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );
