@@ -27,7 +27,7 @@ const experiences = [
   {
     company: "Realinflo",
     role: "Full Stack Web Developer Intern",
-    period: "February 2021 - May 2021",
+    period: "Feb 2021 - May 2021",
     location: "Hong Kong (Remote)",
     summary:
       "Built a Vue.js (Quasar) admin dashboard backed by Feathers.js services for real-estate intelligence.",
@@ -41,7 +41,7 @@ const experiences = [
   {
     company: "Satoripop",
     role: "Full Stack Web Developer Intern",
-    period: "July 2020 - September 2020",
+    period: "July 2020 - Sept 2020",
     location: "Sousse, Tunisia",
     summary:
       "Delivered an employee management platform with a Vue.js frontend and Laravel backend services.",
@@ -66,12 +66,8 @@ export function ExperienceSection() {
         {experiences.map((role) => (
           <li key={`${role.company}-${role.period}`}>
             <Card className="relative overflow-hidden border-white/10 bg-white/[0.035] shadow-[0_0_0_1px_rgba(148,163,184,0.08)] transition hover:border-sky-400/40 hover:bg-white/[0.05]">
-              <span
-                className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-sky-400/70 via-sky-400/20 to-transparent"
-                aria-hidden
-              />
-              <div className="flex flex-col gap-6 p-5 sm:p-6 lg:p-8 md:flex-row md:items-start md:gap-8">
-                <CardHeader className="w-full space-y-4 border-b border-white/5 p-0 pb-4 md:w-64 md:border-b-0 md:border-r md:pb-0 md:pr-6">
+              <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-8">
+                <CardHeader className="w-full space-y-4 border-b border-white/5 p-0 pb-4 md:w-64 md:border-b-0 md:border-r md:pb-0 md:pr-4">
                   <div className="space-y-2">
                     <CardTitle className="text-xl font-semibold leading-tight text-white">
                       {role.role}
@@ -81,9 +77,9 @@ export function ExperienceSection() {
                     </CardDescription>
                   </div>
                   <div className="flex flex-col gap-2 text-xs">
-                    <span className="inline-flex items-center justify-center rounded-full border border-sky-400/40 bg-sky-400/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-sky-100">
+                    <Badge className="w-fit border-white/10 bg-white/10 text-slate-100">
                       {role.period}
-                    </span>
+                    </Badge>
                     <span className="flex items-center gap-2 text-[0.75rem] font-medium text-slate-400">
                       <MapPin className="h-3.5 w-3.5" aria-hidden />
                       {role.location}
