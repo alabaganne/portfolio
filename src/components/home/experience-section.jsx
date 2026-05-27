@@ -61,7 +61,7 @@ const experiences = [
         href: "https://www.upwork.com/freelancers/~018064bc5b1d8ca3ce",
         domain: "Top Rated · 100% JSS",
       },
-      { label: "Socialura", href: "https://socialura.com", domain: "socialura.com" },
+      { label: "Socialura", href: "http://187.124.184.74:3007/", domain: "socialura.com" },
     ],
   },
   {
