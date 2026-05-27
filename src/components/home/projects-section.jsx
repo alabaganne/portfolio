@@ -10,7 +10,7 @@ const projects = [
     name: "MenuMate",
     domain: "187.124.184.74:3003",
     href: "http://187.124.184.74:3003/",
-    category: "SaaS",
+    category: ["Web", "SaaS"],
     badge: "SaaS Founder",
     tag: "Web project",
     description:
@@ -23,7 +23,7 @@ const projects = [
     name: "Global Deals",
     domain: "global-deals-demo.vercel.app",
     href: "https://global-deals-demo.vercel.app",
-    category: "Freelance",
+    category: ["Web", "Freelance"],
     badge: "Freelance",
     tag: "Web project",
     description:
@@ -36,7 +36,7 @@ const projects = [
     name: "Internly",
     domain: "187.124.184.74:3002",
     href: "http://187.124.184.74:3002/",
-    category: "Academic",
+    category: ["Web", "Academic"],
     badge: "Academic",
     tag: "Web project",
     description:
@@ -49,7 +49,7 @@ const projects = [
     name: "Satoripop RH",
     domain: "187.124.184.74:3001",
     href: "http://187.124.184.74:3001/",
-    category: "Internship",
+    category: ["Web", "Internship"],
     badge: "Internship · satoripop",
     tag: "Web project",
     description:
@@ -62,7 +62,7 @@ const projects = [
     name: "Socialura",
     domain: "187.124.184.74:3007",
     href: "http://187.124.184.74:3007/",
-    category: "Freelance",
+    category: ["Web", "Freelance"],
     badge: "Freelance · Upwork",
     tag: "Web project",
     description:
@@ -75,7 +75,7 @@ const projects = [
     name: "Meet — Video Conferencing",
     domain: "187.124.184.74:3004",
     href: "http://187.124.184.74:3004/",
-    category: "Internship",
+    category: ["Web", "Internship"],
     badge: "Internship · satoripop",
     tag: "Web project",
     description:
@@ -88,7 +88,7 @@ const projects = [
     name: "ATS Resume Builder",
     domain: "ats-react-resume-builder.vercel.app",
     href: "https://ats-react-resume-builder.vercel.app",
-    category: "Web",
+    category: ["Web"],
     badge: "Open",
     tag: "Web project",
     description:
@@ -101,7 +101,7 @@ const projects = [
     name: "Eyedeal — E-commerce UI",
     domain: "187.124.184.74:3006",
     href: "http://187.124.184.74:3006/",
-    category: "Internship",
+    category: ["Web", "Internship"],
     badge: "Internship · satoripop",
     tag: "Web project",
     description:
@@ -114,7 +114,7 @@ const projects = [
     name: "Martinez Auto Detail",
     domain: "booking.martinezautodetailwa.com",
     href: "https://booking.martinezautodetailwa.com/",
-    category: "Freelance",
+    category: ["Web", "Freelance"],
     badge: "Freelance",
     tag: "Web project",
     description:
@@ -171,9 +171,9 @@ function ProjectThumb({ project }) {
 }
 
 export function ProjectsSection() {
-  const categories = useMemo(() => ["All", ...Array.from(new Set(projects.map((project) => project.category)))], []);
+  const categories = useMemo(() => ["All", ...Array.from(new Set(projects.flatMap((project) => project.category)))], []);
   const [filter, setFilter] = useState("All");
-  const visible = filter === "All" ? projects : projects.filter((project) => project.category === filter);
+  const visible = filter === "All" ? projects : projects.filter((project) => project.category.includes(filter));
 
   return (
     <section id="projects" className="bg-slate-50 py-20 md:py-28">
@@ -199,7 +199,7 @@ export function ProjectsSection() {
               {category}
               {category !== "All" ? (
                 <span className="ml-1.5 text-xs opacity-60">
-                  {projects.filter((project) => project.category === category).length}
+                  {projects.filter((project) => project.category.includes(category)).length}
                 </span>
               ) : null}
             </button>
@@ -234,7 +234,7 @@ export function ProjectsSection() {
                   ))}
                 </div>
                 <div className="flex items-center justify-between border-t border-dashed border-slate-200 pt-4 text-sm">
-                  <span className="font-mono text-xs uppercase tracking-[0.08em] text-slate-500">{project.category}</span>
+                  <span className="font-mono text-xs uppercase tracking-[0.08em] text-slate-500">{project.category.join(" / ")}</span>
                   {project.href ? (
                     <a
                       className="inline-flex items-center gap-1.5 font-semibold !text-blue-600 hover:underline"

@@ -18,7 +18,7 @@ const experiences = [
       "Created reusable AngularJS services with DI to reduce redundant API calls and improve frontend performance by 50%+.",
       "Introduced automated testing with Jest, Cypress, Mocha, Supertest, Karma, Protractor, plus GA4/GTM analytics.",
     ],
-    tech: ["AngularJS", "Express.js", "Next.js", "TypeScript", "MySQL", "AWS", "React Native"],
+    tech: ["AngularJS", "Express.js", "React Native", "TypeScript", "MySQL", "AWS", "Google Analytics"],
     links: [{ label: "RetainYourBrain", href: "https://retainyourbrain.com", domain: "retainyourbrain.com" }],
   },
   {
@@ -37,7 +37,7 @@ const experiences = [
       "Integrated DeepL API for legal document translation across English, French and Dutch.",
       "Designed background task architecture using Google Cloud Tasks and Pub/Sub for async document processing.",
     ],
-    tech: ["React", "FastAPI", "Supabase", "GCP", "Vertex AI", "DSPy", "pgvector", "DeepL"],
+    tech: ["React", "FastAPI", "Supabase", "GCP", "Vertex AI", "LLM Integration", "OpenAI API", "DSPy", "BigQuery", "DeepL"],
     // links: [{ label: "NORA platform", href: "https://app.nora.legal", domain: "app.nora.legal" }],
   },
   {

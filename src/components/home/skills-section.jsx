@@ -7,7 +7,7 @@ const skillCategories = [
     icon: Bot,
     description:
       "LLM integration, RAG systems, vector databases, document processing pipelines.",
-    skills: ["LLM Integration", "RAG Systems", "DSPy", "Vertex AI", "pgvector", "OCR", "Apache Tika", "AI Agents"],
+    skills: ["LLM Integration", "RAG Systems", "DSPy", "OpenAI API", "Vertex AI", "Vector DBs", "OCR", "Apache Tika", "AI Agents"],
   },
   {
     name: "Frontend",
