@@ -12,7 +12,7 @@ const projects = [
     href: "http://187.124.184.74:3003/",
     category: ["Web", "SaaS"],
     badge: "SaaS Founder",
-    tag: "Web project",
+    tag: "Live",
     description:
       "SaaS platform that lets restaurants create digital menus, generate QR codes, and accept real-time orders from a single dashboard. SEO-optimized and multilingual.",
     tech: ["Next.js", "React", "Tailwind", "Supabase", "PostgreSQL"],
@@ -25,7 +25,7 @@ const projects = [
     href: "https://global-deals-demo.vercel.app",
     category: ["Web", "Freelance"],
     badge: "Freelance",
-    tag: "Web project",
+    tag: "3D Globe",
     description:
       "Interactive 3D globe with event markers, clustering, event linking with curved Bezier visualizations, admin panel, and authentication.",
     tech: ["React 18", "Mapbox GL", "Supabase", "Tiptap", "Tailwind v4"],
@@ -38,7 +38,7 @@ const projects = [
     href: "http://187.124.184.74:3002/",
     category: ["Web", "Academic"],
     badge: "Academic",
-    tag: "Web project",
+    tag: "End of studies project",
     description:
       "Internship platform where students discover and apply to internships and companies post opportunities, with real-time notifications, tracking, and dashboards.",
     tech: ["Laravel", "Vue.js", "Inertia.js", "MySQL", "Pusher"],
@@ -51,7 +51,7 @@ const projects = [
     href: "http://187.124.184.74:3001/",
     category: ["Web", "Internship"],
     badge: "Internship · satoripop",
-    tag: "Web project",
+    tag: "HR platform",
     description:
       "Human resources management platform with role-based dashboards for managers, HR, project managers, and employees, built during my 2020 internship.",
     tech: ["Vue.js", "Laravel", "MySQL", "Bootstrap", "Swagger"],
@@ -64,7 +64,7 @@ const projects = [
     href: "http://187.124.184.74:3007/",
     category: ["Web", "Freelance"],
     badge: "Freelance · Upwork",
-    tag: "Web project",
+    tag: "E-commerce",
     description:
       "Built for an Upwork client, a modern, performance-optimized platform for selling digital social services with clean responsive UI/UX and Stripe payment integration.",
     tech: ["WordPress", "CSS", "Stripe", "Custom UI"],
@@ -77,7 +77,7 @@ const projects = [
     href: "http://187.124.184.74:3004/",
     category: ["Web", "Internship"],
     badge: "Internship · satoripop",
-    tag: "Web project",
+    tag: "Built solo",
     description:
       "A Google Meet-style video meeting app built independently during my 2023 internship at satoripop with authentication, scheduling, protected pages, and Jitsi-powered calls.",
     tech: ["React", "TypeScript", "Node.js", "Express.js", "MySQL", "Jitsi SDK"],
@@ -90,7 +90,7 @@ const projects = [
     href: "https://ats-react-resume-builder.vercel.app",
     category: ["Web"],
     badge: "Open",
-    tag: "Web project",
+    tag: "PDF export",
     description:
       "Builder that helps users create ATS-optimized resumes that pass automated tracking systems with real-time preview and one-click PDF export.",
     tech: ["Next.js", "React", "Tailwind", "jsPDF"],
@@ -103,7 +103,7 @@ const projects = [
     href: "http://187.124.184.74:3006/",
     category: ["Web", "Internship"],
     badge: "Internship · satoripop",
-    tag: "Web project",
+    tag: "PSD → responsive",
     description:
       "Client-side e-commerce landing page built from a PSD design with responsive layout, product sections, cart visuals, and interactive design elements.",
     tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
@@ -116,7 +116,7 @@ const projects = [
     href: "https://booking.martinezautodetailwa.com/",
     category: ["Web", "Freelance"],
     badge: "Freelance",
-    tag: "Web project",
+    tag: "Booking system",
     description:
       "Custom booking system surpassing off-the-shelf solutions with service selection, date/time picking, secure card storage for no-show protection, and an owner dashboard.",
     tech: ["Next.js", "React", "Tailwind", "Square API"],
