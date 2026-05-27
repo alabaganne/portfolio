@@ -1,105 +1,80 @@
 import { SectionHeader } from "@/components/section-header";
-import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
-import {
-  Atom,
-  Braces,
-  CircleDot,
-  Cloud,
-  Code,
-  Database,
-  FileCode2,
-  FileType2,
-  GitBranch,
-  Layers,
-  Leaf,
-  Palette,
-  PenTool,
-  Route,
-  Server,
-  ShieldCheck,
-  Terminal,
-  Wind,
-} from "lucide-react";
+import { Bot, Cloud, Code, Database, Layers, TestTube2 } from "lucide-react";
 
 const skillCategories = [
   {
-    name: "Core Frontend",
-    level: "Primary stack",
+    name: "AI & Modern Stack",
+    icon: Bot,
     description:
-      "Day-to-day interface engineering toolkit for performant, accessible experiences.",
-    skills: [
-      { name: "HTML5", icon: Code },
-      { name: "CSS3", icon: Palette },
-      { name: "JavaScript (ES6+)", icon: Braces },
-      { name: "TypeScript", icon: FileType2 },
-      { name: "React.js", icon: Atom },
-      { name: "Next.js", icon: CircleDot },
-      { name: "Tailwind CSS", icon: Wind },
-    ],
+      "LLM integration, RAG systems, vector databases, document processing pipelines.",
+    skills: ["LLM Integration", "RAG Systems", "DSPy", "Vertex AI", "pgvector", "OCR", "Apache Tika", "AI Agents"],
   },
   {
-    name: "Backend & Data",
-    level: "Advanced delivery",
+    name: "Frontend",
+    icon: Layers,
     description:
-      "APIs, business logic, and data layers I rely on to support full-stack builds.",
-    skills: [
-      { name: "Node.js", icon: Server },
-      { name: "Express.js", icon: Route },
-      { name: "PHP", icon: FileCode2 },
-      { name: "Laravel", icon: Layers },
-      { name: "MySQL", icon: Database },
-      { name: "MongoDB", icon: Leaf },
-      { name: "Supabase", icon: ShieldCheck },
-    ],
+      "Production React apps, design-system-driven UI, responsive and accessible.",
+    skills: ["React.js", "Next.js", "TypeScript", "Vue.js", "AngularJS", "Tailwind CSS", "Shadcn UI", "React Native"],
   },
   {
-    name: "Cloud, Platforms & Tooling",
-    level: "Supporting",
+    name: "Backend & Databases",
+    icon: Database,
     description:
-      "Infrastructure and delivery ecosystem that keeps projects production-ready.",
-    skills: [
-      { name: "AWS", icon: Cloud },
-      { name: "WordPress", icon: PenTool },
-      { name: "Git & GitHub", icon: GitBranch },
-      { name: "Linux", icon: Terminal },
-    ],
+      "Scalable APIs, async pipelines, well-modeled relational and vector data.",
+    skills: ["Node.js", "NestJS", "Express.js", "FastAPI", "Laravel", "PostgreSQL", "MySQL", "MongoDB"],
+  },
+  {
+    name: "Cloud & DevOps",
+    icon: Cloud,
+    description:
+      "Production deployments, CI/CD, background processing, monitoring.",
+    skills: ["AWS", "GCP Cloud Run", "Pub/Sub", "Cloud Tasks", "Docker", "Linux", "Supabase", "Vercel"],
+  },
+  {
+    name: "Testing & Practices",
+    icon: TestTube2,
+    description:
+      "Automated test suites, code review, API design, and Agile delivery.",
+    skills: ["Jest", "Cypress", "Mocha", "Supertest", "Karma", "Protractor", "Agile/Scrum", "Git"],
+  },
+  {
+    name: "Languages",
+    icon: Code,
+    description:
+      "Strong typed and dynamic languages across the full stack.",
+    skills: ["JavaScript", "TypeScript", "Python", "PHP", "SQL", "HTML5", "CSS3", "C"],
   },
 ];
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="space-y-8">
-      <SectionHeader
-        eyebrow="SKILLS"
-        title="Technical toolkit"
-        description="Organized by focus area so you can quickly see where I deliver the most impact."
-      />
-      <div className="space-y-10">
-        {skillCategories.map(({ name, level, description, skills }) => (
-          <div key={name} className="space-y-4">
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <div className="space-y-1">
-                <h3 className="text-lg font-semibold text-slate-100">{name}</h3>
-                <p className="text-sm text-slate-400">{description}</p>
+    <section id="skills" className="bg-white py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <SectionHeader
+          eyebrow="04 · Skills"
+          title="Full-stack, end to end."
+          description="Hands-on across the modern web stack, from typed frontends to async pipelines on managed cloud."
+        />
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {skillCategories.map(({ name, icon: Icon, description, skills }) => (
+            <div key={name} className="rounded-2xl border border-slate-200 bg-white p-6 transition hover:-translate-y-0.5 hover:border-blue-100">
+              <div className="flex items-center gap-3">
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-blue-50 text-blue-600">
+                  <Icon className="h-5 w-5" aria-hidden />
+                </span>
+                <h3 className="font-display text-lg font-semibold tracking-tight text-slate-950">{name}</h3>
               </div>
-              <Badge variant={level === "Primary stack" ? "default" : "subtle"}>{level}</Badge>
-            </div>
-            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
-              {skills.map(({ name, icon: Icon }) => (
-                <Card
-                  key={name}
-                  className="flex flex-col items-center gap-3 border-white/10 bg-white/[0.04] p-4 text-center text-sm font-medium text-slate-200"
-                >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-400/10 text-sky-400">
-                    <Icon className="h-6 w-6" aria-hidden />
+              <p className="mt-3 text-sm leading-6 text-slate-500">{description}</p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <span key={skill} className="rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-xs font-medium text-slate-600">
+                    {skill}
                   </span>
-                  <span>{name}</span>
-                </Card>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

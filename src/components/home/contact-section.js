@@ -1,73 +1,74 @@
-import Link from "next/link";
-import { SectionHeader } from "@/components/section-header";
-import { Card, CardContent } from "@/components/ui/card";
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { BriefcaseBusiness, Github, Linkedin, Mail, Phone } from "lucide-react";
 
 const contactLinks = [
   {
-    label: "Email",
     href: "mailto:alabaganne9@gmail.com",
-    description: "alabaganne9@gmail.com",
+    label: "alabaganne9@gmail.com",
     Icon: Mail,
+    primary: true,
   },
   {
-    label: "Phone",
     href: "tel:+21650101959",
-    description: "+216 50 101 959",
+    label: "+216 50 101 959",
     Icon: Phone,
   },
   {
-    label: "LinkedIn",
     href: "https://www.linkedin.com/in/alabaganne/",
-    description: "linkedin.com/in/alabaganne",
+    label: "LinkedIn",
     Icon: Linkedin,
   },
   {
-    label: "GitHub",
     href: "https://github.com/alabaganne",
-    description: "github.com/alabaganne",
+    label: "GitHub",
     Icon: Github,
+  },
+  {
+    href: "https://www.upwork.com/freelancers/~018064bc5b1d8ca3ce",
+    label: "Upwork",
+    Icon: BriefcaseBusiness,
   },
 ];
 
 export function ContactSection() {
   return (
-    <section id="contact" className="space-y-8">
-      <SectionHeader
-        eyebrow="CONNECT"
-        title="Let’s collaborate"
-        description="Open to full-stack roles, freelance engagements, and conversations about scalable web platforms."
+    <section id="contact" className="relative overflow-hidden bg-[#07142b] text-center text-slate-300">
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 h-80 bg-[radial-gradient(600px_300px_at_50%_0%,rgba(37,99,235,0.35),transparent_70%)]"
       />
-      <Card className="border-white/10 bg-white/[0.05]">
-        <CardContent className="gap-6 text-sm text-slate-200">
-          <p>
-            Reach out by email, phone, or social links below. I reply within two business days and enjoy connecting with teams building impactful products.
-          </p>
-          <div className="grid gap-4 sm:grid-cols-3">
-            {contactLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                target={link.href.startsWith("http") ? "_blank" : undefined}
-                rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-                className="group flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.02] p-4 transition hover:border-sky-400/50 hover:bg-white/[0.08]"
-              >
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.06] text-sky-200">
-                  <link.Icon className="h-5 w-5" aria-hidden />
-                </span>
-                <span className="flex flex-col">
-                  <span className="text-xs uppercase tracking-[0.2em] text-slate-400">
-                    {link.label}
-                  </span>
-                  <span className="text-sm font-medium text-white">
-                    {link.description}
-                  </span>
-                </span>
-              </Link>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+      <div className="relative mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-28">
+        <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.14em] text-blue-300 before:h-px before:w-7 before:bg-current after:h-px after:w-7 after:bg-current">
+          Get in touch
+        </span>
+        <h2 className="mt-5 font-display text-4xl font-semibold tracking-[-0.03em] text-white md:text-6xl">
+          Let&apos;s build something real.
+        </h2>
+        <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
+          I&apos;m open to senior full-stack roles, AI-product work, and select freelance engagements. The fastest way to reach me is email.
+        </p>
+        <div className="mt-9 flex flex-wrap justify-center gap-3">
+          {contactLinks.map(({ href, label, Icon, primary }) => (
+            <a
+              key={href}
+              className={
+                "inline-flex h-12 items-center gap-2 rounded-full border px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 " +
+                (primary
+                  ? "border-blue-600 bg-blue-600 hover:bg-blue-700"
+                  : "border-white/15 bg-white/[0.04] hover:border-blue-600 hover:bg-blue-600")
+              }
+              href={href}
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel={href.startsWith("http") ? "noreferrer" : undefined}
+            >
+              <Icon className="h-4 w-4" aria-hidden />
+              {label}
+            </a>
+          ))}
+        </div>
+        <footer className="mt-16 border-t border-white/10 pt-7 text-sm font-medium text-slate-500">
+          <span>© {new Date().getFullYear()} Ala Baganne. All rights reserved.</span>
+        </footer>
+      </div>
     </section>
   );
 }

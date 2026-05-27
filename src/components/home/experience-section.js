@@ -1,118 +1,200 @@
 import { SectionHeader } from "@/components/section-header";
-import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { MapPin } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const experiences = [
   {
-    company: "Retain Health",
     role: "Software Engineer",
-    period: "July 2021 - Present",
-    location: "Boston, MA (Remote)",
+    company: "Retain Health, Inc.",
+    type: "Part-time",
+    location: "Boston, MA",
+    mode: "Remote",
+    period: "Aug 2021 — Present",
     summary:
-      "Developing core healthcare platform features across AngularJS, Express.js, Bootstrap, and MySQL.",
+      "Healthcare platform with 25,000+ active users focused on Alzheimer's prevention through personalized lifestyle interventions.",
     achievements: [
-      "Introduced Jest and Cypress suites covering unit, integration, and end-to-end workflows.",
-      "Partnered with QA and UX to release patient-facing experiences that align with clinical requirements.",
-      "Optimised database queries and API responses to maintain snappy dashboards at scale.",
+      "Core contributor to RetainYourBrain, achieving a 22% user retention rate over 4+ years of continuous shipping.",
+      "Built core features full-stack on AngularJS, Express.js, Next.js, Node.js, TypeScript and MySQL.",
+      "Designed a dynamic form system with complex conditional logic powering personalized routines and topic recommendations.",
+      "Created reusable AngularJS services with DI to reduce redundant API calls and improve frontend performance by 50%+.",
+      "Introduced automated testing with Jest, Cypress, Mocha, Supertest, Karma, Protractor, plus GA4/GTM analytics.",
     ],
-    tech: ["AngularJS", "Express.js", "Bootstrap", "MySQL", "Jest", "Cypress"],
+    tech: ["AngularJS", "Express.js", "Next.js", "TypeScript", "MySQL", "AWS", "React Native"],
+    links: [{ label: "RetainYourBrain", href: "https://retainyourbrain.com", domain: "retainyourbrain.com" }],
   },
   {
-    company: "Realinflo",
-    role: "Full Stack Web Developer Intern",
-    period: "Feb 2021 - May 2021",
-    location: "Hong Kong (Remote)",
+    role: "Full-Stack & AI Engineer",
+    company: "Wequity",
+    type: "Part-time",
+    location: "Brussels, Belgium",
+    mode: "Remote",
+    period: "Oct 2025 — May 2026",
     summary:
-      "Built a Vue.js (Quasar) admin dashboard backed by Feathers.js services for real-estate intelligence.",
+      "Legal tech company building AI-powered tools for law firms and notaries across Belgium and the Netherlands.",
     achievements: [
-      "Implemented REST integrations and optimised data fetching for large listing datasets.",
-      "Coordinated roadmap updates with leadership to prioritise weekly releases.",
-      "Shipped reporting features that accelerated enterprise onboarding.",
+      "Architected NORA, an AI-powered legal document processing platform handling EN/FR/NL documents on React, FastAPI and Supabase with 224+ DB tables.",
+      "Built a Smart Processing module that learns document transformation patterns from example pairs using LLM APIs and DSPy.",
+      "Developed a RAG-based Knowledge Base where users query uploaded legal documents and get AI-generated answers with source citations.",
+      "Integrated DeepL API for legal document translation across English, French and Dutch.",
+      "Designed background task architecture using Google Cloud Tasks and Pub/Sub for async document processing.",
     ],
-    tech: ["Vue.js", "Quasar", "Feathers.js", "Node.js", "REST APIs", "MySQL"],
+    tech: ["React", "FastAPI", "Supabase", "GCP", "Vertex AI", "DSPy", "pgvector", "DeepL"],
+    links: [{ label: "NORA platform", href: "https://app.nora.legal", domain: "app.nora.legal" }],
   },
   {
-    company: "Satoripop",
-    role: "Full Stack Web Developer Intern",
-    period: "July 2020 - Sept 2020",
+    role: "Freelance Web Developer",
+    company: "Upwork (Top Rated)",
+    type: "Self-employed",
+    location: "Worldwide",
+    mode: "Remote",
+    period: "Oct 2024 — Present",
+    summary:
+      "Top Rated freelancer with a 100% Job Success Score, building modern, scalable, high-performance web applications.",
+    achievements: [
+      "Delivered 3+ full-stack projects with a 100% Job Success Score.",
+      "Built the Martinez Auto Detail booking system with dynamic pricing and secure card storage.",
+      "Developed Socialura for a client, an e-commerce platform with Stripe payment integration for digital service sales.",
+    ],
+    tech: ["Next.js", "React", "Node.js", "Tailwind", "Supabase", "Stripe", "Square"],
+    links: [
+      {
+        label: "Upwork profile",
+        href: "https://www.upwork.com/freelancers/~018064bc5b1d8ca3ce",
+        domain: "Top Rated · 100% JSS",
+      },
+      { label: "Socialura", href: "https://socialura.com", domain: "socialura.com" },
+    ],
+  },
+  {
+    role: "Full-Stack Developer Intern",
+    company: "satoripop",
+    type: "Internship",
     location: "Sousse, Tunisia",
-    summary:
-      "Delivered an employee management platform with a Vue.js frontend and Laravel backend services.",
+    mode: "Hybrid",
+    period: "Jul 2023 — Aug 2023",
+    summary: "Built a Google Meet-style video meeting platform independently during the internship.",
     achievements: [
-      "Converted PSD designs into responsive layouts with Bootstrap components.",
-      "Documented backend endpoints using Swagger for smoother team collaboration.",
-      "Implemented authentication and role-based access to secure HR data.",
+      "Built video meeting platform with authentication, meeting creation, scheduling, protected pages, and Jitsi-powered calls.",
+      "Delivered both frontend and backend independently with React, TypeScript, Express.js and MySQL.",
     ],
-    tech: ["Vue.js", "Laravel", "Bootstrap", "Swagger", "MySQL"],
+    tech: ["React", "TypeScript", "Node.js", "Express.js", "MySQL", "Jitsi SDK"],
+    links: [{ label: "Meet platform", href: "http://187.124.184.74:3004/", domain: "187.124.184.74:3004" }],
+  },
+  {
+    role: "Full-Stack Developer Intern",
+    company: "Realinflo",
+    type: "Internship",
+    location: "Hong Kong SAR",
+    mode: "Remote",
+    period: "Feb 2021 — May 2021",
+    summary:
+      "Built an admin dashboard for a real estate intelligence platform, working directly with the CTO via weekly milestones.",
+    achievements: [
+      "Built admin dashboard with Vue.js and Node.js, improving data management efficiency by 35%.",
+      "Delivered enhanced data visualization and reporting through weekly milestone reviews with the CTO.",
+    ],
+    tech: ["Vue.js", "Quasar", "Node.js", "Feathers.js", "MongoDB", "SCSS"],
+  },
+  {
+    role: "Web Development Intern",
+    company: "satoripop",
+    type: "Internship",
+    location: "Sousse, Tunisia",
+    mode: "Hybrid",
+    period: "Jul 2020 — Aug 2020",
+    summary:
+      "Designed and developed a web application to manage company employees and converted a PSD landing page design into a fully responsive site.",
+    achievements: [
+      "Built Satoripop RH, a Vue.js and Laravel HR platform with role-based dashboards for managers, HR, project managers and employees.",
+      "Documented backend API endpoints using Swagger/OpenAPI for clean handoff and future contributors.",
+      "Converted a PSD landing-page design into a responsive e-commerce front-end with hand-written HTML, CSS and JavaScript.",
+    ],
+    tech: ["Vue.js", "Laravel", "MySQL", "Bootstrap", "HTML", "CSS", "JavaScript"],
+    links: [
+      { label: "Satoripop RH", href: "http://187.124.184.74:3001/", domain: "187.124.184.74:3001" },
+      { label: "Eyedeal landing page", href: "http://187.124.184.74:3006/", domain: "187.124.184.74:3006" },
+    ],
   },
 ];
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="space-y-8">
-      <SectionHeader
-        eyebrow="EXPERIENCE"
-        title="Professional experience"
-        description="Shaping healthcare, real estate, and HR platforms with reliable frontend and backend delivery."
+    <section id="experience" className="relative overflow-hidden bg-[#0b1c3a] py-20 text-slate-300 md:py-28">
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:linear-gradient(180deg,#000_0%,transparent_72%)]"
       />
-      <ol className="space-y-6">
-        {experiences.map((role) => (
-          <li key={`${role.company}-${role.period}`}>
-            <Card className="relative overflow-hidden border-white/10 bg-white/[0.035] shadow-[0_0_0_1px_rgba(148,163,184,0.08)] transition hover:border-sky-400/40 hover:bg-white/[0.05]">
-              <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-8">
-                <CardHeader className="w-full space-y-4 border-b border-white/5 p-0 pb-4 md:w-64 md:border-b-0 md:border-r md:pb-0 md:pr-4">
-                  <div className="space-y-2">
-                    <CardTitle className="text-xl font-semibold leading-tight text-white">
-                      {role.role}
-                    </CardTitle>
-                    <CardDescription className="text-sm text-slate-300">
-                      {role.company}
-                    </CardDescription>
-                  </div>
-                  <div className="flex flex-col gap-2 text-xs">
-                    <Badge className="w-fit border-white/10 bg-white/10 text-slate-100">
-                      {role.period}
-                    </Badge>
-                    <span className="flex items-center gap-2 text-[0.75rem] font-medium text-slate-400">
-                      <MapPin className="h-3.5 w-3.5" aria-hidden />
-                      {role.location}
-                    </span>
-                  </div>
-                </CardHeader>
-                <CardContent className="flex-1 space-y-4 p-0 text-sm text-slate-200">
-                  <p className="text-base leading-relaxed text-slate-300">{role.summary}</p>
-                  <ul className="grid gap-2 sm:grid-cols-2">
-                    {role.achievements.map((item) => (
-                      <li key={item} className="flex items-start gap-2 leading-relaxed">
-                        <span className="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-sky-400/80" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2">
-                    {role.tech.map((tech) => (
-                      <Badge
-                        key={tech}
-                        variant="subtle"
-                        className="border-white/10 bg-white/10 text-[0.7rem] text-slate-100"
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+        <SectionHeader
+          dark
+          eyebrow="02 · Experience"
+          title="A working track record across health, legal & SaaS."
+          description="Five years of continuous shipping through long-term contracts, freelance wins, and product-led work for distributed teams."
+        />
+        <ol className="relative mt-14 space-y-10 before:absolute before:bottom-2 before:left-[18px] before:top-2 before:w-px before:bg-gradient-to-b before:from-transparent before:via-blue-900 before:to-transparent">
+          {experiences.map((role) => (
+            <li key={`${role.company}-${role.period}`} className="relative pl-14">
+              <span
+                className={
+                  "absolute left-[11px] top-2 h-4 w-4 rounded-full border-2 border-blue-500 shadow-[0_0_0_4px_rgba(37,99,235,0.15)] bg-blue-500 after:absolute after:-inset-2 after:animate-ping after:rounded-full after:bg-blue-500 after:opacity-25"
+                }
+              />
+              <article className="rounded-2xl border border-white/10 bg-white/[0.035] p-6 transition hover:border-blue-300/40 hover:bg-white/[0.05] md:p-7">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <h3 className="font-display text-xl font-semibold tracking-tight text-white">{role.role}</h3>
+                  <span className="font-mono text-xs text-slate-400">{role.period}</span>
+                </div>
+                <div className="mt-2 flex flex-wrap items-center gap-2 text-sm font-medium text-blue-200">
+                  <span>{role.company}</span>
+                  <span className="text-slate-600">·</span>
+                  <span>{role.type}</span>
+                  <span className="text-slate-600">·</span>
+                  <span>{role.location}</span>
+                  <span className="text-slate-600">·</span>
+                  <span>{role.mode}</span>
+                </div>
+                <p className="mt-4 text-sm leading-7 text-slate-300">{role.summary}</p>
+                <ul className="mt-4 grid gap-2">
+                  {role.achievements.map((item) => (
+                    <li key={item} className="flex gap-3 text-sm leading-7 text-slate-300">
+                      <span className="mt-3 h-px w-2 flex-none bg-blue-300" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                {role.links?.length ? (
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {role.links.map((link) => (
+                      <a
+                        key={link.href}
+                        className="inline-flex items-center gap-2 rounded-xl border border-blue-300/20 bg-blue-300/10 px-3.5 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-blue-300/50 hover:bg-blue-300/15"
+                        href={link.href}
+                        target="_blank"
+                        rel="noreferrer"
                       >
-                        {tech}
-                      </Badge>
+                        <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                        <span>{link.label}</span>
+                        <span className="border-l border-blue-300/30 pl-2 font-mono text-xs font-normal text-blue-200">
+                          {link.domain}
+                        </span>
+                      </a>
                     ))}
                   </div>
-                </CardContent>
-              </div>
-            </Card>
-          </li>
-        ))}
-      </ol>
+                ) : null}
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {role.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full border border-blue-300/20 bg-blue-300/10 px-3 py-1 font-mono text-xs text-blue-200"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            </li>
+          ))}
+        </ol>
+      </div>
     </section>
   );
 }

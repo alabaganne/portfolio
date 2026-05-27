@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 import { getAllPostSlugs, getPostBySlug } from "@/lib/blog";
 
@@ -17,7 +18,8 @@ function keywordsForMetadata(keywords) {
 }
 
 export async function generateMetadata({ params }) {
-  const post = await getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
 
   if (!post) {
     return {
@@ -53,7 +55,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPostPage({ params }) {
-  const post = await getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
 
   if (!post) {
     notFound();
@@ -89,45 +92,43 @@ export default async function BlogPostPage({ params }) {
   };
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.06),_rgba(3,7,18,0.96))] pb-20 text-slate-100">
-      <div className="absolute inset-x-0 top-0 -z-10 h-64 bg-[radial-gradient(600px_circle_at_10%_20%,rgba(56,189,248,0.18),transparent)]" aria-hidden />
-      <div className="relative mx-auto flex w-full max-w-3xl flex-col gap-10 px-6 pt-20 md:px-8">
-        <div className="flex flex-col gap-4 text-sm text-slate-400">
-          <Link
-            href="/blog"
-            className="inline-flex max-w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-sky-200/90 transition hover:border-sky-400/40 hover:text-sky-100"
-          >
-            <span aria-hidden>←</span> Back to blog
+    <main className="min-h-screen bg-slate-50 text-slate-700">
+      <div className="border-b border-slate-200 bg-white">
+        <div className="mx-auto flex h-[68px] max-w-6xl items-center justify-between px-5 sm:px-8">
+          <Link href="/" className="flex items-center gap-3 font-display font-semibold tracking-[-0.01em] text-slate-950">
+            <span className="grid h-8 w-8 place-items-center rounded-[10px] bg-gradient-to-br from-blue-600 to-slate-950 text-sm font-bold text-white">
+              AB
+            </span>
+            <span>Ala Baganne</span>
           </Link>
-          {metadata.tags.length > 0 && (
-            <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.3em] text-sky-200/70">
-              {metadata.tags.map((tag) => (
-                <span key={tag} className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
-                  #{tag}
-                </span>
-              ))}
-            </div>
-          )}
+          <Link className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 transition hover:text-blue-600" href="/blog">
+            <ArrowLeft className="h-4 w-4" aria-hidden />
+            Blog
+          </Link>
         </div>
+      </div>
 
-        <article className="flex flex-col gap-8 rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg shadow-slate-950/40 backdrop-blur">
-          <header className="flex flex-col gap-4">
-            <span className="inline-flex max-w-fit items-center gap-3 text-xs uppercase tracking-[0.35em] text-sky-200/80">
+      <div className="mx-auto flex w-full max-w-4xl flex-col gap-10 px-5 py-12 sm:px-8 md:py-16">
+        <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white">
+          <header className="p-6 md:p-9">
+            <span className="inline-flex max-w-fit items-center gap-3 font-mono text-xs uppercase tracking-[0.12em] text-blue-600">
               {metadata.category && <span>{metadata.category}</span>}
               {publishedLabel && <time dateTime={metadata.date}>{publishedLabel}</time>}
             </span>
-            <h1 className="text-3xl font-semibold text-white md:text-4xl">{metadata.title}</h1>
-            <p className="text-base leading-relaxed text-slate-300">{metadata.description}</p>
-            <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.35em] text-slate-400">
+            <h1 className="mt-5 font-display text-4xl font-semibold leading-tight tracking-[-0.03em] text-slate-950 md:text-5xl">
+              {metadata.title}
+            </h1>
+            <p className="mt-5 text-base leading-8 text-slate-600 md:text-lg">{metadata.description}</p>
+            <div className="mt-5 flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-[0.12em] text-slate-500">
               {metadata.author && <span>By {metadata.author}</span>}
               {metadata.tags.length > 0 && (
-                <span className="text-sky-200/80">{metadata.tags.join(" · ")}</span>
+                <span className="text-blue-600">{metadata.tags.join(" · ")}</span>
               )}
             </div>
           </header>
 
           {metadata.coverImage ? (
-            <div className="relative h-64 w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
+            <div className="relative h-72 w-full overflow-hidden border-y border-slate-200 bg-slate-100 md:h-96">
               <Image
                 src={metadata.coverImage}
                 alt={metadata.title}
@@ -140,26 +141,27 @@ export default async function BlogPostPage({ params }) {
           ) : null}
 
           <div
-            className="mdx-content text-base leading-relaxed text-slate-200"
+            className="mdx-content px-6 py-8 text-base leading-relaxed md:px-9 md:py-10"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </article>
 
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-sm text-slate-300 shadow-lg shadow-slate-950/40">
-          <h2 className="text-lg font-semibold text-white">Need a hand with your next project?</h2>
-          <p className="mt-2 text-sm text-slate-300">
+        <div className="rounded-3xl border border-slate-200 bg-white p-6 text-sm text-slate-600">
+          <h2 className="font-display text-xl font-semibold tracking-tight text-slate-950">Need a hand with your next project?</h2>
+          <p className="mt-2 leading-7">
             I partner with founders and teams to build performant web applications and thoughtful product experiences.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
             <Link
               href="mailto:alabaganne9@gmail.com"
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-sky-500/20 px-5 py-2 text-sm font-semibold text-sky-100 transition hover:border-sky-400/50 hover:bg-sky-500/30"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold !text-white transition hover:bg-blue-700"
             >
               Start a conversation
+              <ArrowUpRight className="h-4 w-4" aria-hidden />
             </Link>
             <Link
-              href="/"
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-5 py-2 text-sm font-semibold text-white transition hover:border-sky-400/40 hover:text-sky-100"
+              href="/#projects"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-blue-200 hover:text-blue-600"
             >
               Explore the portfolio
             </Link>

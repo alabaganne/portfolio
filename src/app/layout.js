@@ -1,32 +1,42 @@
 import Script from "next/script";
-import { Geist, Geist_Mono } from "next/font/google";
+import { JetBrains_Mono, Manrope, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const jetBrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 const siteUrl = "https://alabaganne.com";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Ala Baganne | Software Engineer, Full-Stack Web Developer",
+  title: "Ala Baganne | Full-Stack Software Engineer",
   description:
-    "Portfolio for Ala Baganne, a web developer with 5+ years of experience delivering full-stack web applications, highlighting projects, skills, and ways to connect.",
+    "Ala Baganne is a full-stack software engineer building production web apps, AI document systems, and SaaS products with React, Next.js, Node.js, FastAPI, and Supabase.",
   keywords: [
     "Ala Baganne",
-    "web developer",
-    "full-stack engineer",
+    "full-stack software engineer",
+    "AI engineer",
+    "Next.js developer",
     "React",
-    "Vue",
-    "Laravel",
+    "FastAPI",
+    "Supabase",
     "Node.js",
+    "SaaS developer",
   ],
   alternates: {
     canonical: "/",
@@ -34,16 +44,16 @@ export const metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Ala Baganne | Software Engineer, Full-Stack Web Developer",
+    title: "Ala Baganne | Full-Stack Software Engineer",
     description:
-      "Explore Ala Baganne's full-stack portfolio, featuring shipped projects, technical skills, and ways to collaborate.",
+      "Explore Ala Baganne's portfolio of production web apps, AI document systems, SaaS products, and full-stack engineering work.",
     siteName: "Ala Baganne Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ala Baganne | Software Engineer, Full-Stack Web Developer",
+    title: "Ala Baganne | Full-Stack Software Engineer",
     description:
-      "Explore Ala Baganne's full-stack portfolio, featuring shipped projects, technical skills, and ways to collaborate.",
+      "Explore Ala Baganne's portfolio of production web apps, AI document systems, SaaS products, and full-stack engineering work.",
   },
   robots: {
     index: true,
@@ -55,23 +65,38 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-[--background] text-[--foreground] antialiased`}
+        className={`${manrope.variable} ${spaceGrotesk.variable} ${jetBrainsMono.variable} bg-[--background] text-[--foreground] antialiased`}
       >
         <Script id="ld-json" type="application/ld+json" strategy="beforeInteractive">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Person',
-            name: 'Ala Baganne',
-            url: siteUrl,
-            jobTitle: 'Full-Stack Web Developer',
-            description:
-              'Full-stack web developer with 5+ years of experience building reliable applications across healthcare, real estate, and education.',
-            sameAs: [
-              'https://www.linkedin.com/in/alabaganne/',
-              'https://github.com/alabaganne',
-              'mailto:alabaganne9@gmail.com',
-            ],
-          })}
+          {JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Ala Baganne",
+              url: siteUrl,
+              email: "alabaganne9@gmail.com",
+              jobTitle: "Full-Stack Software Engineer",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Monastir",
+                addressCountry: "TN",
+              },
+              description:
+                "Full-stack software engineer with 5+ years of experience building production web applications, AI document systems, and SaaS products.",
+              sameAs: [
+                "https://www.linkedin.com/in/alabaganne/",
+                "https://github.com/alabaganne",
+                "https://www.upwork.com/freelancers/~018064bc5b1d8ca3ce",
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Ala Baganne Portfolio",
+              url: siteUrl,
+              inLanguage: "en",
+            },
+          ])}
         </Script>
         {children}
       </body>
