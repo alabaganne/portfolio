@@ -20,8 +20,8 @@ const projects = [
   },
   {
     name: "Global Deals",
-    domain: "global-deals.vercel.app",
-    href: "https://global-deals.vercel.app",
+    domain: "global-deals-demo.vercel.app",
+    href: "https://global-deals-demo.vercel.app",
     category: "Web",
     badge: "Interactive",
     tag: "3D Globe",
