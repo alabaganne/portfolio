@@ -27,7 +27,7 @@ export default function Home() {
       >
         <div className="mx-auto flex h-[68px] max-w-6xl items-center justify-between gap-4 px-5 sm:px-8">
           <a href="#top" className="flex items-center gap-3 font-display font-semibold tracking-[-0.01em] text-slate-950">
-            <span className="grid h-8 w-8 place-items-center rounded-[10px] bg-gradient-to-br from-blue-600 to-slate-950 text-sm font-bold text-white">
+            <span className="grid h-8 w-8 place-items-center rounded-[10px] bg-gradient-to-br from-blue-500 to-slate-800 text-sm font-bold text-white">
               AB
             </span>
             <span>Ala Baganne</span>

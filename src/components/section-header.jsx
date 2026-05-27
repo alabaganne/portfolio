@@ -1,6 +1,8 @@
 import { cn } from "@/lib/utils";
 
 export function SectionHeader({ eyebrow, title, description, dark = false, centered = false, className }) {
+  const label = typeof eyebrow === "string" ? eyebrow.replace(/^\d+\s*·\s*/, "") : eyebrow;
+
   return (
     <div
       className={cn(
@@ -19,7 +21,7 @@ export function SectionHeader({ eyebrow, title, description, dark = false, cente
             !centered && "before:h-px before:w-6 before:bg-current",
           )}
         >
-          {eyebrow}
+          {label}
         </span>
       ) : null}
       {title ? (

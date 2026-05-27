@@ -49,9 +49,9 @@ export function EducationSection() {
               </li>
             ))}
           </ol>
-          <div className="space-y-3">
+          <div className="space-y-4">
             {certifications.map((certification) => (
-              <div key={certification.name} className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4">
+              <div key={certification.name} className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white px-4 py-5">
                 <span className="grid h-10 w-10 flex-none place-items-center rounded-xl bg-slate-50 text-blue-600">
                   <Award className="h-5 w-5" aria-hidden />
                 </span>

@@ -38,7 +38,7 @@ const experiences = [
       "Designed background task architecture using Google Cloud Tasks and Pub/Sub for async document processing.",
     ],
     tech: ["React", "FastAPI", "Supabase", "GCP", "Vertex AI", "DSPy", "pgvector", "DeepL"],
-    links: [{ label: "NORA platform", href: "https://app.nora.legal", domain: "app.nora.legal" }],
+    // links: [{ label: "NORA platform", href: "https://app.nora.legal", domain: "app.nora.legal" }],
   },
   {
     role: "Freelance Web Developer",
