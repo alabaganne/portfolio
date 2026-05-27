@@ -32,7 +32,7 @@ export function HeroSection() {
           Available for new opportunities · Remote-first
         </p>
         <h1 className="mt-8 max-w-5xl font-display text-5xl font-semibold leading-[1.02] tracking-[-0.035em] text-white sm:text-6xl lg:text-7xl">
-          Full-Stack engineer building
+          Full-Stack engineer building&nbsp;
           <br className="hidden sm:block" />
           <span className="bg-gradient-to-r from-blue-300 via-blue-200 to-white bg-clip-text text-transparent">
             production web apps

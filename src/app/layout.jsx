@@ -37,6 +37,7 @@ export const metadata = {
     "Supabase",
     "Node.js",
     "SaaS developer",
+    "web developer"
   ],
   alternates: {
     canonical: "/",
