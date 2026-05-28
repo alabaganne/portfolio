@@ -75,12 +75,33 @@ section[id] {
 .mdx-content ol {
   display: grid;
   gap: 0.75rem;
-  padding-left: 1.5rem;
   color: #334155;
 }
 
 .mdx-content li {
   line-height: 1.7;
+}
+
+.mdx-content ol {
+  padding-left: 1.5rem;
+}
+
+.blog-article ul {
+  list-style: none;
+}
+
+.blog-article ul > li {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.blog-article ul > li::before {
+  background: #2563eb;
+  content: "";
+  flex: none;
+  height: 1px;
+  margin-top: 0.9em;
+  width: 0.5rem;
 }
 
 .mdx-content a {
@@ -119,4 +140,21 @@ section[id] {
   background: transparent;
   color: inherit;
   padding: 0;
+}
+
+.blog-article p:first-of-type {
+  color: #334155;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.blog-article p:first-of-type::first-letter {
+  color: #2563eb;
+  float: left;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 3.4em;
+  font-weight: 700;
+  line-height: 0.9;
+  margin: 0.35rem 0.85rem 0 0;
 }

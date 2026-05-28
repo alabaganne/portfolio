@@ -1,26 +1,27 @@
 ---
-title: "Shipping My First SaaS: How I Built MenuMate for Restaurants"
-description: "I share how I designed and engineered MenuMate—my first production SaaS—for restaurants, from problem discovery to the tech stack that powers it."
-keywords: "MenuMate, SaaS developer, restaurant technology, Next.js portfolio, Supabase case study, Ala Baganne"
+title: "Building MenuMate: A Digital Menu for Restaurants"
+description: "I share why I built MenuMate for restaurants and how it helps owners update menus, reduce printing costs, and serve guests more easily."
+keywords: "MenuMate, digital menu, restaurant menu, restaurant technology, Ala Baganne"
 date: "2025-01-20"
 author: "Ala Baganne"
 category: "Case Studies"
-tags: ["founder story", "saas", "next.js", "supabase", "restaurant tech"]
-coverImage: "/blog/digital-menu-hero.svg"
+tags: ["founder story", "digital menu", "restaurant tech"]
+coverImage: "/blog/menumate-restaurant-dashboard-cover.png"
+coverImageAlt: "MenuMate restaurant digital menu dashboard with QR code ordering and mobile menu preview"
 ---
 
-In 2024 I decided to stop waiting for the “perfect” idea and ship something real. I kept hearing the same pain from the restaurant owners around me: updating menus was slow, printing costs were painful, and no one had clarity on what guests actually ordered. So I challenged myself to build my first production SaaS from the ground up. The result is **MenuMate**—a modern digital menu and restaurant management platform that blends thoughtful UX with real-time operations.
+In 2024 I decided to stop waiting for the “perfect” idea and build something useful. I kept hearing the same problems from restaurant owners around me: updating menus took too much time, printing new menus was expensive, and it was hard to know what guests were really choosing. That led me to build **MenuMate**—a digital menu platform made for restaurants that want easier menu updates and a smoother guest experience.
 
-Today, [MenuMate](https://www.menumate.net) is the flagship project I share with hiring managers and founders. It showcases how I approach product research, system design, frontend craft, and the little moments that make software feel reliable.
+Today, [MenuMate](https://www.menumate.net) is the main project I share when people ask what I can build. It shows how I listen to real business problems and turn them into a product that is simple to use.
 
 ## Listening First, Then Building
 
-Before I wrote a single line of code I sat with owners, managers, and servers to map their workflows. Paper menus could not keep up with reality: prices changed weekly, dishes sold out hourly, and guests expected the convenience they get from delivery apps. Those interviews guided the pillars for MenuMate:
+Before building MenuMate, I spoke with owners, managers, and servers to understand their daily work. Paper menus could not keep up with reality: prices changed often, dishes sold out during service, and guests expected faster, easier ordering. Those conversations shaped the main goals for MenuMate:
 
 - Give owners complete control over their menu in minutes, not weeks
 - Remove the recurring printing costs that eat into already thin margins
-- Improve the guest experience with richer content, personalization, and accessibility
-- Provide analytics so leaders can make decisions based on data instead of gut feelings
+- Make the menu easier for guests to browse and understand
+- Help restaurants see which items are popular and when guests order most
 
 ## Designing a Product Restaurants Enjoy Using
 
@@ -30,40 +31,40 @@ Building MenuMate meant designing for two audiences at once.
 
 I focused on features that make day-to-day operations calmer:
 
-- **📱 Instant menu management** with live previews so changes feel safe
-- **🎨 Mobile-first layouts** that adapt to each restaurant’s brand without extra design tools
-- **📊 Real-time dashboard** that surfaces sales trends and order volume automatically
-- **🌍 Multi-language and currency support** so global teams work in their native context
-- **📄 PDF export** for venues that still need a printed option for regulators or VIPs
-- **🔗 QR code generation** so each table and marketing campaign has its own entry point
-- **📧 Newsletter system** to keep loyal guests engaged directly from the dashboard
+- **Instant menu updates** so owners can change prices, photos, and availability right away
+- **Mobile-friendly menus** that look good on guests’ phones
+- **Simple dashboard** for checking orders, popular items, and sales activity
+- **Multiple languages and currencies** for restaurants serving different types of guests
+- **Printable menu option** for restaurants that still need a paper version
+- **QR codes** for tables, counters, takeout bags, or marketing materials
+- **Guest updates** so restaurants can stay in touch with loyal customers
 
 ### For Diners
 
 I wanted the guest experience to feel effortless:
 
-- **No app required**—scan a QR code and the menu is there instantly
+- **No app required**: scan a QR code and the menu opens instantly
 - **Helpful filters** for dietary needs, allergens, and chef recommendations
 - **Secure checkout** with familiar payment options
 - **Table-specific ordering** that routes straight to the kitchen without mix-ups
 
-## Building My First Production SaaS as a Solo Developer
+## Building MenuMate as a Solo Developer
 
-MenuMate is powered by **Next.js 15** with the App Router so I can mix static content, streaming UI, and API routes in one codebase. **TypeScript** keeps refactors safe, while **Tailwind CSS** and **shadcn/ui** give me a consistent design language. For motion, I reach for **Framer Motion**—the hero animation and microinteractions reassure staff that their updates were saved.
+Building MenuMate meant handling every part of the product myself. I planned the screens, designed the menus, built the dashboard, connected restaurant accounts, and tested the ordering flow from a guest’s phone to the restaurant side.
 
-On the backend, **Supabase** handles authentication, authorization, and a PostgreSQL database with Row Level Security so each restaurant works inside its own secure data silo. Live updates happen through Supabase real-time channels, and jobs like PDF generation and analytics collection sit behind edge functions.
+I wanted the product to feel practical, not complicated. Restaurant teams should be able to log in, update a menu item, publish the change, and get back to service without needing technical help. Guests should be able to scan, browse, and order without thinking about the software behind it.
 
-Shipping this solo meant wearing every hat: UX research, system architecture, database design, and QA. I documented the data model and RLS strategy in `docs/DB_OVERVIEW.md` so future collaborators can onboard quickly.
+That was the biggest lesson from building it: good restaurant software should remove work from the team, not add more steps.
 
-## Technical Highlights I’m Proud Of
+## Product Highlights I’m Proud Of
 
-- **Instant menu publishing** uses optimistic UI updates plus Supabase subscriptions so teams see changes on every device as soon as they press save.
-- **PDF parity** with the digital menu via React PDF, giving owners a polished option for guests who still prefer paper.
-- **Actionable analytics** through PostHog, helping owners spot their best sellers, drop-off points, and peak ordering hours.
-- **Delightful alerts** powered by Sonner, giving clear feedback when permissions or inventory rules block an update.
+- **Fast menu publishing** so teams can update items during service.
+- **Digital and printable menus** so restaurants can support both online and paper needs.
+- **Useful reports** that show best sellers, busy hours, and ordering patterns.
+- **Clear messages** that tell staff when something is saved, blocked, or needs attention.
 
 ## What Comes Next
 
-MenuMate launched as my first production SaaS, but it is far from finished. I am already iterating on table-side payments, loyalty programs, and deeper POS integrations. More importantly, I now have a repeatable framework for turning messy real-world problems into software that feels considered.
+MenuMate started as my first full product, but it is far from finished. I am already working on table-side payments, loyalty features, and better connections with the tools restaurants already use.
 
-If you’re evaluating a developer who can research, design, and ship customer-ready products, MenuMate is my proof. Explore the live experience at [MenuMate](https://www.menumate.net) and let’s talk about building something remarkable together.
+If you run a restaurant or work with one, MenuMate is built to make menus easier to manage and easier for guests to use. Explore the live experience at [MenuMate](https://www.menumate.net).

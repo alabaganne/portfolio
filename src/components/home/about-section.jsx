@@ -61,35 +61,37 @@ export function AboutSection() {
               ))}
             </div>
           </div>
-          <aside className="rounded-3xl border border-slate-200 bg-gradient-to-b from-slate-50 to-white p-7">
-            <div className="divide-y divide-dashed divide-slate-200">
-              {details.map(([label, value]) => (
-                <div key={label} className="flex justify-between gap-5 py-3.5 text-sm">
-                  <span className="text-slate-500">{label}</span>
-                  <span className={label === "Status" ? "font-semibold text-green-600" : "text-right font-semibold text-slate-950"}>
-                    {value}
-                  </span>
+          <aside>
+            <div className="rounded-3xl border border-slate-200 bg-gradient-to-b from-slate-50 to-white p-7">
+              <div className="divide-y divide-dashed divide-slate-200">
+                {details.map(([label, value]) => (
+                  <div key={label} className="flex justify-between gap-5 py-3.5 text-sm">
+                    <span className="text-slate-500">{label}</span>
+                    <span className={label === "Status" ? "font-semibold text-green-600" : "text-right font-semibold text-slate-950"}>
+                      {value}
+                    </span>
+                  </div>
+                ))}
+                <div className="flex justify-between gap-5 py-3.5 text-sm">
+                  <span className="text-slate-500">Upwork</span>
+                  <a
+                    className="text-right font-semibold text-blue-600 hover:underline"
+                    href="https://www.upwork.com/freelancers/~018064bc5b1d8ca3ce"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Top Rated · 100% JSS ↗
+                  </a>
                 </div>
-              ))}
-              <div className="flex justify-between gap-5 py-3.5 text-sm">
-                <span className="text-slate-500">Upwork</span>
-                <a
-                  className="text-right font-semibold text-blue-600 hover:underline"
-                  href="https://www.upwork.com/freelancers/~018064bc5b1d8ca3ce"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Top Rated · 100% JSS ↗
-                </a>
               </div>
+              <a
+                className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-slate-950 px-5 text-sm font-semibold text-white transition hover:bg-blue-600"
+                href="mailto:alabaganne9@gmail.com"
+              >
+                <Mail className="h-4 w-4" aria-hidden />
+                alabaganne9@gmail.com
+              </a>
             </div>
-            <a
-              className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-slate-950 px-5 text-sm font-semibold text-white transition hover:bg-blue-600"
-              href="mailto:alabaganne9@gmail.com"
-            >
-              <Mail className="h-4 w-4" aria-hidden />
-              alabaganne9@gmail.com
-            </a>
           </aside>
         </div>
       </div>

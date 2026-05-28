@@ -185,7 +185,18 @@ function ensureArray(value) {
   return [value];
 }
 
-function normalizeMetadata(slug, metadata) {
+function estimateReadTime(content) {
+  const words = content
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/[#>*_`[\]()!-]/g, " ")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+
+  return `${Math.max(1, Math.ceil(words.length / 220))} min read`;
+}
+
+function normalizeMetadata(slug, metadata, content = "") {
   const normalizedDate = metadata.date ? new Date(metadata.date) : null;
 
   return {
@@ -198,6 +209,8 @@ function normalizeMetadata(slug, metadata) {
     category: metadata.category ?? "",
     tags: ensureArray(metadata.tags),
     coverImage: metadata.coverImage ?? "",
+    coverImageAlt: metadata.coverImageAlt ?? metadata.title ?? "Blog post cover image",
+    readTime: estimateReadTime(content),
   };
 }
 
@@ -205,7 +218,7 @@ async function readPostFile(slug) {
   const filePath = path.join(BLOG_DIR, `${slug}.mdx`);
   const file = await fs.readFile(filePath, "utf8");
   const { metadata, content } = parseFrontMatter(file);
-  const normalized = normalizeMetadata(slug, metadata);
+  const normalized = normalizeMetadata(slug, metadata, content);
   const html = markdownToHtml(content);
 
   return { metadata: normalized, html };

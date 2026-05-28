@@ -130,12 +130,12 @@ export function ExperienceSection() {
           title="A working track record across health, legal & SaaS."
           description="Five years of continuous shipping through long-term contracts, freelance wins, and product-led work for distributed teams."
         />
-        <ol className="relative mt-14 space-y-10 before:absolute before:bottom-2 before:left-[18px] before:top-2 before:w-px before:bg-gradient-to-b before:from-transparent before:via-blue-900 before:to-transparent">
+        <ol className="relative mt-14 space-y-10 md:before:absolute md:before:bottom-2 md:before:left-[18px] md:before:top-2 md:before:w-px md:before:bg-gradient-to-b md:before:from-transparent md:before:via-blue-900 md:before:to-transparent">
           {experiences.map((role) => (
-            <li key={`${role.company}-${role.period}`} className="relative pl-14">
+            <li key={`${role.company}-${role.period}`} className="relative md:pl-14">
               <span
                 className={
-                  "absolute left-[11px] top-2 h-4 w-4 rounded-full border-2 border-blue-500 shadow-[0_0_0_4px_rgba(37,99,235,0.15)] bg-blue-500 after:absolute after:-inset-2 after:animate-ping after:rounded-full after:bg-blue-500 after:opacity-25"
+                  "absolute left-[11px] top-2 hidden h-4 w-4 rounded-full border-2 border-blue-500 bg-blue-500 shadow-[0_0_0_4px_rgba(37,99,235,0.15)] after:absolute after:-inset-2 after:animate-ping after:rounded-full after:bg-blue-500 after:opacity-25 md:block"
                 }
               />
               <article className="rounded-2xl border border-white/10 bg-white/[0.035] p-6 transition hover:border-blue-300/40 hover:bg-white/[0.05] md:p-7">

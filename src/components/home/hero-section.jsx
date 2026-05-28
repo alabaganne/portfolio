@@ -3,7 +3,7 @@ import { ArrowUpRight, Download, Mail, MapPin, MonitorSmartphone } from "lucide-
 const profile = {
   location: "Monastir, Tunisia",
   summary:
-    "5+ years shipping React, Next.js, Node and Python in healthcare, legal tech and SaaS, from 25K-user health platforms to RAG-powered legal document automation.",
+    "I build web apps with React, Next.js, Node, and Python. Over the last 5+ years, I’ve worked on healthcare, legal tech, and SaaS products used by real teams and customers.",
   email: "alabaganne9@gmail.com",
   website: "alabaganne.com",
 };
@@ -31,9 +31,8 @@ export function HeroSection() {
           <span className="h-2 w-2 rounded-full bg-green-400 shadow-[0_0_0_4px_rgba(34,197,94,0.18)]" />
           Available for new opportunities · Remote-first
         </p>
-        <h1 className="mt-8 max-w-5xl font-display text-5xl font-semibold leading-[1.02] tracking-[-0.035em] text-white sm:text-6xl lg:text-7xl">
-          Full-Stack engineer building&nbsp;
-          <br className="hidden sm:block" />
+        <h1 className="mt-8 max-w-5xl font-display text-4xl font-semibold leading-[1.08] tracking-[-0.035em] text-white sm:text-6xl sm:leading-[1.02] lg:text-7xl">
+          Full-Stack engineer building{" "}
           <span className="bg-gradient-to-r from-blue-300 via-blue-200 to-white bg-clip-text text-transparent">
             production web apps
           </span>{" "}
