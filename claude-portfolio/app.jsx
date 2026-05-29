@@ -23,7 +23,7 @@ function Nav() {
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
-          <a href="#education">Education</a>
+          <a href="Blog.html">Blog</a>
         </div>
         <a className="nav-cta" href="#contact">
           Get in touch <Icon name="arrow" size={14} />

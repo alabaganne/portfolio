@@ -286,7 +286,10 @@ export default async function BlogPostPage({ params }) {
       ) : null}
 
       <footer className="relative overflow-hidden bg-[#07142b] px-5 py-20 text-center text-slate-300 sm:px-8">
-        <div className="absolute inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.35),transparent_65%)]" />
+        <div
+          aria-hidden
+          className="absolute inset-x-0 top-0 h-80 bg-[radial-gradient(600px_300px_at_50%_0%,rgba(37,99,235,0.35),transparent_70%)]"
+        />
         <div className="relative mx-auto max-w-6xl">
           <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.14em] text-blue-300 before:h-px before:w-7 before:bg-current after:h-px after:w-7 after:bg-current">
             Get in touch
@@ -311,9 +314,8 @@ export default async function BlogPostPage({ params }) {
               GitHub
             </Link>
           </div>
-          <div className="mt-14 flex flex-wrap justify-between gap-3 border-t border-white/10 pt-7 text-sm text-slate-500">
+          <div className="mt-14 border-t border-white/10 pt-7 text-center text-sm font-medium text-slate-500">
             <span>© {new Date().getFullYear()} Ala Baganne. All rights reserved.</span>
-            <span className="font-mono">designed &amp; built in Monastir, Tunisia</span>
           </div>
         </div>
       </footer>
