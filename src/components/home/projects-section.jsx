@@ -8,8 +8,8 @@ import Image from "next/image";
 const projects = [
   {
     name: "MenuMate",
-    domain: "187.124.184.74:3003",
-    href: "http://187.124.184.74:3003/",
+    domain: "menumate.net",
+    href: "https://menumate.net",
     category: ["Web", "SaaS"],
     badge: "SaaS Founder",
     tag: "Live",
@@ -18,6 +18,18 @@ const projects = [
     tech: ["Next.js", "React", "Tailwind", "Supabase", "PostgreSQL"],
     accent: "#1d4ed8",
     image: "/projects/menumate-demo.png",
+  },
+  {
+    name: "LeBonBureau",
+    domain: "lebonbureau.alabaganne.com",
+    href: "https://lebonbureau.alabaganne.com",
+    category: ["Web", "Founder"],
+    badge: "Founder",
+    tag: "E-commerce store",
+    description:
+      "A polished, modern e-commerce storefront for an office-furniture brand, with a refined responsive design, product catalog, admin dashboard, and Supabase-backed storage.",
+    tech: ["Next.js", "React", "TypeScript", "Supabase"],
+    accent: "#0f766e",
   },
   // {
   //   name: "Global Deals",
@@ -34,8 +46,8 @@ const projects = [
   // },
   {
     name: "Internly",
-    domain: "187.124.184.74:3002",
-    href: "http://187.124.184.74:3002/",
+    domain: "internly.alabaganne.com",
+    href: "http://internly.alabaganne.com",
     category: ["Web", "Academic"],
     badge: "Academic",
     tag: "End of studies project",
@@ -47,8 +59,8 @@ const projects = [
   },
   {
     name: "Satoripop RH",
-    domain: "187.124.184.74:3001",
-    href: "http://187.124.184.74:3001/",
+    domain: "hr-management.alabaganne.com",
+    href: "http://hr-management.alabaganne.com",
     category: ["Web", "Internship"],
     badge: "Internship · satoripop",
     tag: "HR platform",
@@ -60,8 +72,8 @@ const projects = [
   },
   {
     name: "Socialura",
-    domain: "187.124.184.74:3007",
-    href: "http://187.124.184.74:3007/",
+    domain: "socialura.alabaganne.com",
+    href: "http://socialura.alabaganne.com",
     category: ["Web", "Freelance"],
     badge: "Freelance · Upwork",
     tag: "E-commerce",
@@ -73,8 +85,8 @@ const projects = [
   },
   {
     name: "Meet — Video Conferencing",
-    domain: "187.124.184.74:3004",
-    href: "http://187.124.184.74:3004/",
+    domain: "jitsi.alabaganne.com",
+    href: "http://jitsi.alabaganne.com",
     category: ["Web", "Internship"],
     badge: "Internship · satoripop",
     tag: "Built solo",
@@ -99,8 +111,8 @@ const projects = [
   },
   {
     name: "Eyedeal — E-commerce UI",
-    domain: "187.124.184.74:3006",
-    href: "http://187.124.184.74:3006/",
+    domain: "ecommerce.alabaganne.com",
+    href: "http://ecommerce.alabaganne.com",
     category: ["Web", "Internship"],
     badge: "Internship · satoripop",
     tag: "PSD → responsive",

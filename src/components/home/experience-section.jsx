@@ -61,7 +61,7 @@ const experiences = [
         href: "https://www.upwork.com/freelancers/~018064bc5b1d8ca3ce",
         domain: "Top Rated · 100% JSS",
       },
-      { label: "Socialura", href: "http://187.124.184.74:3007/", domain: "socialura.com" },
+      { label: "Socialura", href: "http://socialura.alabaganne.com", domain: "socialura.alabaganne.com" },
     ],
   },
   {
@@ -77,7 +77,7 @@ const experiences = [
       "Delivered both frontend and backend independently with React, TypeScript, Express.js and MySQL.",
     ],
     tech: ["React", "TypeScript", "Node.js", "Express.js", "MySQL", "Jitsi SDK"],
-    links: [{ label: "Meet platform", href: "http://187.124.184.74:3004/", domain: "187.124.184.74:3004" }],
+    links: [{ label: "Meet platform", href: "http://jitsi.alabaganne.com", domain: "jitsi.alabaganne.com" }],
   },
   {
     role: "Full-Stack Developer Intern",
@@ -110,8 +110,8 @@ const experiences = [
     ],
     tech: ["Vue.js", "Laravel", "MySQL", "Bootstrap", "HTML", "CSS", "JavaScript"],
     links: [
-      { label: "Satoripop RH", href: "http://187.124.184.74:3001/", domain: "187.124.184.74:3001" },
-      { label: "Eyedeal landing page", href: "http://187.124.184.74:3006/", domain: "187.124.184.74:3006" },
+      { label: "Satoripop RH", href: "http://hr-management.alabaganne.com", domain: "hr-management.alabaganne.com" },
+      { label: "Eyedeal landing page", href: "http://ecommerce.alabaganne.com", domain: "ecommerce.alabaganne.com" },
     ],
   },
 ];
