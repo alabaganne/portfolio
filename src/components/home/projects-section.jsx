@@ -23,6 +23,7 @@ const projects = [
     name: "LeBonBureau",
     domain: "lebonbureau.alabaganne.com",
     href: "https://lebonbureau.alabaganne.com",
+    image: "/projects/lebonbureau-demo.jpg",
     category: ["Web", "Founder"],
     badge: "Founder",
     tag: "E-commerce store",
