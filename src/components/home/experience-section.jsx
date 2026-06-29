@@ -5,7 +5,7 @@ const experiences = [
   {
     role: "Software Engineer",
     company: "Retain Health, Inc.",
-    type: "Part-time",
+    type: "Contract",
     location: "Boston, MA",
     mode: "Remote",
     period: "Aug 2021 — Present",
@@ -24,7 +24,7 @@ const experiences = [
   {
     role: "Full-Stack & AI Engineer",
     company: "Wequity",
-    type: "Part-time",
+    type: "Contract",
     location: "Brussels, Belgium",
     mode: "Remote",
     period: "Oct 2025 — May 2026",
