@@ -32,19 +32,19 @@ const projects = [
     tech: ["Next.js", "React", "TypeScript", "Supabase"],
     accent: "#0f766e",
   },
-  {
-    name: "Global Deals",
-    domain: "global-deals.vercel.app",
-    href: "https://global-deals.vercel.app",
-    category: ["Web", "Freelance"],
-    badge: "Freelance",
-    tag: "3D Globe",
-    description:
-      "Interactive 3D globe with event markers, clustering, event linking with curved Bezier visualizations, admin panel, and authentication.",
-    tech: ["React 18", "Mapbox GL", "Supabase", "Tiptap", "Tailwind v4"],
-    accent: "#1e40af",
-    image: "/projects/global-deals-demo.png",
-  },
+  // {
+  //   name: "Global Deals",
+  //   domain: "global-deals.vercel.app",
+  //   href: "https://global-deals.vercel.app",
+  //   category: ["Web", "Freelance"],
+  //   badge: "Freelance",
+  //   tag: "3D Globe",
+  //   description:
+  //     "Interactive 3D globe with event markers, clustering, event linking with curved Bezier visualizations, admin panel, and authentication.",
+  //   tech: ["React 18", "Mapbox GL", "Supabase", "Tiptap", "Tailwind v4"],
+  //   accent: "#1e40af",
+  //   image: "/projects/global-deals-demo.png",
+  // },
   {
     name: "Internly",
     domain: "internly.alabaganne.com",
