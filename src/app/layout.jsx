@@ -49,12 +49,27 @@ export const metadata = {
     description:
       "Explore Ala Baganne's portfolio of production web apps, AI document systems, SaaS products, and full-stack engineering work.",
     siteName: "Ala Baganne Portfolio",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Ala Baganne, Full-Stack Software Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ala Baganne | Full-Stack Software Engineer",
     description:
       "Explore Ala Baganne's portfolio of production web apps, AI document systems, SaaS products, and full-stack engineering work.",
+    images: [
+      {
+        url: "/og-image.png",
+        alt: "Ala Baganne, Full-Stack Software Engineer",
+      },
+    ],
   },
   robots: {
     index: true,

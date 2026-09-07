@@ -95,13 +95,17 @@ export async function generateMetadata({ params }) {
       publishedTime: metadata.date || undefined,
       authors: metadata.author ? [metadata.author] : undefined,
       tags: metadata.tags.length > 0 ? metadata.tags : undefined,
-      images: metadata.coverImage ? [{ url: metadata.coverImage, alt: metadata.coverImageAlt }] : undefined,
+      images: metadata.coverImage
+        ? [{ url: metadata.coverImage, alt: metadata.coverImageAlt }]
+        : [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ala Baganne, Full-Stack Software Engineer" }],
     },
     twitter: {
-      card: metadata.coverImage ? "summary_large_image" : "summary",
+      card: "summary_large_image",
       title: metadata.title,
       description: metadata.description,
-      images: metadata.coverImage ? [{ url: metadata.coverImage, alt: metadata.coverImageAlt }] : undefined,
+      images: metadata.coverImage
+        ? [{ url: metadata.coverImage, alt: metadata.coverImageAlt }]
+        : [{ url: "/og-image.png", alt: "Ala Baganne, Full-Stack Software Engineer" }],
     },
   };
 }
