@@ -26,7 +26,7 @@ const details = [
   ["Based in", "Monastir, Tunisia"],
   ["Experience", "5+ years"],
   ["Work mode", "Remote · Worldwide"],
-  ["Status", "● Available"],
+  // ["Status", "● Available"],
   ["Languages", "EN · FR · AR"],
 ];
 

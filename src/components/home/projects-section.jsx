@@ -5,12 +5,14 @@ import { useMemo, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
+// Set `topPick: true` on a project to feature it under the Top Picks filter.
 const projects = [
   {
     name: "MenuMate",
     domain: "menumate.net",
     href: "https://menumate.net",
     category: ["Web", "SaaS"],
+    topPick: true,
     badge: "SaaS Founder",
     tag: "Live",
     description:
@@ -25,6 +27,7 @@ const projects = [
     href: "https://lebonbureau.alabaganne.com",
     image: "/projects/lebonbureau-demo.jpg",
     category: ["Web", "Founder"],
+    topPick: true,
     badge: "Founder",
     tag: "E-commerce store",
     description:
@@ -50,6 +53,7 @@ const projects = [
     domain: "internly.alabaganne.com",
     href: "http://internly.alabaganne.com",
     category: ["Web", "Academic"],
+    topPick: true,
     badge: "Academic",
     tag: "End of studies project",
     description:
@@ -183,10 +187,21 @@ function ProjectThumb({ project }) {
   );
 }
 
+const TOP_PICKS = "Top Picks";
+
+function matchesFilter(project, filter) {
+  if (filter === "All") return true;
+  if (filter === TOP_PICKS) return Boolean(project.topPick);
+  return project.category.includes(filter);
+}
+
 export function ProjectsSection() {
-  const categories = useMemo(() => ["All", ...Array.from(new Set(projects.flatMap((project) => project.category)))], []);
-  const [filter, setFilter] = useState("All");
-  const visible = filter === "All" ? projects : projects.filter((project) => project.category.includes(filter));
+  const categories = useMemo(
+    () => [TOP_PICKS, "All", ...Array.from(new Set(projects.flatMap((project) => project.category)))],
+    []
+  );
+  const [filter, setFilter] = useState(TOP_PICKS);
+  const visible = projects.filter((project) => matchesFilter(project, filter));
 
   return (
     <section id="projects" className="bg-slate-50 py-20 md:py-28">
@@ -212,7 +227,7 @@ export function ProjectsSection() {
               {category}
               {category !== "All" ? (
                 <span className="ml-1.5 text-xs opacity-60">
-                  {projects.filter((project) => project.category.includes(category)).length}
+                  {projects.filter((project) => matchesFilter(project, category)).length}
                 </span>
               ) : null}
             </button>
